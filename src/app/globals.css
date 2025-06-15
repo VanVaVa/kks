@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --color-text-dark: #727272;
+  --color-text-light: #fff;
+  --color-background: rgba(0, 0, 0, 0.83);
+  --main-text-size: 20px;
+  --header-gradient: linear-gradient(
+    90deg,
+    transparent 0%,
+    #404040 25%,
+    #404040 75%,
+    transparent 100%
+  );
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text-light);
+  font-family: Poppins, sans-serif;
+}
