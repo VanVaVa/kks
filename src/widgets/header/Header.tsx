@@ -3,7 +3,7 @@ import Link from "next/link";
 import HeaderNavigation from "./HeaderNavigation";
 
 const Header = () => (
-  <header className="px-[45px] pt-[20px] flex justify-between items-center">
+  <header className="w-full px-[45px] pt-[20px] flex justify-between items-center fixed z-1">
     <Link href="/">
       <Image src="/images/logo.png" alt="" width={155} height={100} />
     </Link>

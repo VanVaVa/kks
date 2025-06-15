@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/widgets/header/Header";
+// import localFont from "next/font/local";
 
 // const sfUiDisplay = localFont({
-//   src: "../../public/fonts/sf-ui-display-medium.woff2",
+//   src: "/fonts/sf-ui-display-medium.woff2",
 //   weight: "500",
 //   variable: "--font-sf-ui-display",
 // });
