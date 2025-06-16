@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const MainPage = () => (
   <div
-    className="bg-[url('/images/first_slide_background.jpg')] h-screen"
+    className="min-h-screen bg-[url('/images/first_slide_background.jpg')]"
     style={{ backgroundPosition: "-455px -419px" }}
   >
     <div className="w-full h-full bg-(--color-background)">
@@ -15,7 +15,7 @@ const MainPage = () => (
         }}
       >
         <section className="pt-[325px] pl-[200px]">
-          <h1 className="text-[95px] font-bold leading-none max-w-[700px]">
+          <h1 className="text-[95px] font-bold leading-none max-w-[700px] font-(family-name:--font-sf-ui-display)">
             Краснодар Компрессор Сервис
           </h1>
           <div className="flex gap-[35px] mt-[70px]">
@@ -30,9 +30,8 @@ const MainPage = () => (
               для различных отраслей промышленности
             </p>
           </div>
-          <div className="flex gap-[23px] items-center mt-[90px]">
-            <span>Оставить заявку</span>
-            <IconButton>
+          <div className="mt-[90px]">
+            <IconButton label="Оставить заявку">
               <Image src="images/board.svg" width={40} height={40} alt="" />
             </IconButton>
           </div>
