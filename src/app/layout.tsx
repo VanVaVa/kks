@@ -15,6 +15,7 @@ const sfUiDisplay = localFont({
 const poppins = Poppins({
   variable: "--font-poppins",
   weight: "400",
+  subsets: ["latin", "latin-ext"],
 });
 
 export const metadata: Metadata = {
