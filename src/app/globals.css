@@ -7,6 +7,8 @@
   --color-blue: #3a32d9;
   --color-numbers: rgba(255, 255, 255, 0.025);
   --main-text-size: 20px;
+  --stat-width: calc(100% - 140px - 275px);
+  --carousel-width: calc(100% - 200px);
 }
 
 body {
@@ -14,4 +16,9 @@ body {
   color: var(--color-text-light);
   font-family: Poppins, sans-serif;
   scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
 }

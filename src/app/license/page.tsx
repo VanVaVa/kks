@@ -1,3 +1,5 @@
-const LicensePage = () => <div></div>;
+import LicensePage from "@/pages/license/LicensePage";
 
-export default LicensePage;
+const Page = () => <LicensePage />;
+
+export default Page;

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import Header from "@/widgets/header/Header";
 import localFont from "next/font/local";
-import { ScrollTracker } from "@/shared/components/ScrollTracker";
 
 const sfUiDisplay = localFont({
   src: [
@@ -34,10 +32,7 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${sfUiDisplay.variable} antialiased`}
       >
-        <ScrollTracker>
-          <Header />
-          {children}
-        </ScrollTracker>
+        {children}
       </body>
     </html>
   );

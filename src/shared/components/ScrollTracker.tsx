@@ -10,22 +10,20 @@ import React, {
   useCallback,
 } from "react";
 
-// Типы для контекста
 type VisibilityContextType = {
   visibleElementId: string | null;
+  scrollOffset: number | null;
   scrollToElement: (id: string) => void;
 };
 
-// Создаем контекст для видимого элемента
 const VisibilityContext = createContext<VisibilityContextType>({
   visibleElementId: null,
+  scrollOffset: null,
   scrollToElement: () => {},
 });
 
-// Хук для доступа к видимому элементу
 export const useVisibility = () => useContext(VisibilityContext);
 
-// Провайдер контекста
 export const VisibilityProvider = ({
   children,
   value,
@@ -38,7 +36,6 @@ export const VisibilityProvider = ({
   </VisibilityContext.Provider>
 );
 
-// Пропсы для ScrollTracker
 type ScrollTrackerProps = {
   children: ReactNode;
   rootMargin?: string;
@@ -46,7 +43,6 @@ type ScrollTrackerProps = {
   scrollBehavior?: ScrollBehavior;
 };
 
-// Компонент-обертка
 export const ScrollTracker = ({
   children,
   rootMargin = "0px",
@@ -56,6 +52,7 @@ export const ScrollTracker = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const [visibleElementId, setVisibleElementId] = useState<string | null>(null);
   const observerRef = useRef<IntersectionObserver | null>(null);
+  const [scrollOffset, setScrollOffset] = useState(0);
 
   const scrollToElement = useCallback(
     (id: string) => {
@@ -71,9 +68,19 @@ export const ScrollTracker = ({
   );
 
   useEffect(() => {
+    const handleScroll = () => {
+      setScrollOffset(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
     if (!containerRef.current) return;
 
-    // Создаем IntersectionObserver
     observerRef.current = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -85,7 +92,6 @@ export const ScrollTracker = ({
       { rootMargin, threshold }
     );
 
-    // Наблюдаем все дочерние элементы с ID
     const container = containerRef.current;
     Array.from(container.children).forEach((child) => {
       if (child.id) {
@@ -99,7 +105,9 @@ export const ScrollTracker = ({
   }, [rootMargin, threshold]);
 
   return (
-    <VisibilityProvider value={{ visibleElementId, scrollToElement }}>
+    <VisibilityProvider
+      value={{ visibleElementId, scrollToElement, scrollOffset }}
+    >
       <div ref={containerRef}>{children}</div>
     </VisibilityProvider>
   );

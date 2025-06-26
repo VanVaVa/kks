@@ -1,44 +1,32 @@
 import IconButton from "@/shared/components/IconButton";
+import Page from "@/shared/components/Page";
 import Image from "next/image";
 
 const MainPage = () => (
-  <div
-    className="min-h-screen bg-[url('/images/first_slide_background.jpg')]"
-    style={{ backgroundPosition: "-455px -419px" }}
-  >
-    <div className="w-full h-full bg-(--color-background)">
-      <div
-        className="bg-[url('/images/kamaz.png')] h-screen bg-no-repeat"
-        style={{
-          backgroundPosition: "645px 138px",
-          backgroundSize: "1544px 1020px",
-        }}
-      >
-        <section className="pt-[325px] pl-[200px]">
-          <h1 className="text-[95px] font-bold leading-none max-w-[700px] font-(family-name:--font-sf-ui-display)">
-            Краснодар Компрессор Сервис
-          </h1>
-          <div className="flex gap-[35px] mt-[70px]">
-            <div className="w-[7px] bg-(--color-blue)" />
-            <p className="max-w-[306px] text-(length:--main-text-size) text-(--color-text-dark)">
-              Разрабатываем и поставляем
-              <br />
-              <span className="text-(--color-text-light)">
-                компрессорное оборудование
-              </span>
-              <br />
-              для различных отраслей промышленности
-            </p>
-          </div>
-          <div className="mt-[90px]">
-            <IconButton label="Оставить заявку">
-              <Image src="images/board.svg" width={40} height={40} alt="" />
-            </IconButton>
-          </div>
-        </section>
+  <Page id="1">
+    <section className="mb-[100px] mt-[325px] ml-[200px] inline-block max-[920px]:ml-[30px] max-[610px]:mt-[180px]">
+      <h1 className="text-[95px] max-[610px]:text-[70px] max-[500px]:text-[50px] font-bold leading-none max-w-[700px] font-(family-name:--font-sf-ui-display)">
+        Краснодар Компрессор Сервис
+      </h1>
+      <div className="flex gap-[35px] mt-[70px]">
+        <div className="w-[7px] bg-(--color-blue)" />
+        <p className="max-w-[306px] text-(length:--main-text-size) text-(--color-text-dark)">
+          Разрабатываем и поставляем
+          <br />
+          <span className="text-(--color-text-light)">
+            компрессорное оборудование
+          </span>
+          <br />
+          для различных отраслей промышленности
+        </p>
       </div>
-    </div>
-  </div>
+      <div className="mt-[90px]">
+        <IconButton label="Оставить заявку">
+          <Image src="images/board.svg" width={40} height={40} alt="" />
+        </IconButton>
+      </div>
+    </section>
+  </Page>
 );
 
 export default MainPage;
