@@ -7,12 +7,14 @@ interface CarouselProps {
   data: {
     imageUrl?: string;
     alt?: string;
-    title: ReactNode;
+    title?: string;
+    subtitle?: string;
   }[];
   showNext?: boolean;
+  children?: ReactNode;
 }
 
-const Carousel: FC<CarouselProps> = ({ data, showNext = false }) => {
+const Carousel: FC<CarouselProps> = ({ data, children, showNext = false }) => {
   const [currentElement, setCurrentElement] = useState(0);
 
   const handleElementChange = (direction: "left" | "right") => {
@@ -23,7 +25,7 @@ const Carousel: FC<CarouselProps> = ({ data, showNext = false }) => {
   };
 
   return (
-    <div className="flex grow-1 mr-[200px]">
+    <div className="flex grow-1 mr-[200px] mb-[200px]">
       {data.map((el, idx) => {
         if (currentElement === idx) {
           return (
@@ -31,33 +33,44 @@ const Carousel: FC<CarouselProps> = ({ data, showNext = false }) => {
               key={idx}
               className="inline-flex w-full gap-[35px] items-end justify-between"
             >
-              <div>
-                <div>{el.title}</div>
-                <div className="flex gap-[35px] mt-[90px]">
-                  <button
-                    className="bg-[#323232] p-[12px] rounded-full cursor-pointer disabled:bg-[#212121] hover:bg-[#3A3A3A] duration-300"
-                    onClick={() => handleElementChange("left")}
-                    disabled={currentElement === 0}
-                  >
-                    <Image
-                      src="images/left_arrow.svg"
-                      width={40}
-                      height={40}
-                      alt=""
-                    />
-                  </button>
-                  <button
-                    className="bg-[#323232] p-[12px] rounded-full cursor-pointer disabled:bg-[#212121] hover:bg-[#3A3A3A] duration-300"
-                    onClick={() => handleElementChange("right")}
-                    disabled={currentElement === data.length - 1}
-                  >
-                    <Image
-                      src="images/right_arrow.svg"
-                      width={40}
-                      height={40}
-                      alt=""
-                    />
-                  </button>
+              <div className="flex flex-col justify-between h-full">
+                {children}
+                <div>
+                  <div>
+                    <span className="font-(family-name:--font-sf-ui-display) font-bold text-[25px] leading-[0.9]">
+                      {el.title}
+                    </span>
+                    <div className="w-[25px] h-[7px] bg-(--color-blue) mt-[35px]" />
+                    <span className="text-(--color-text-dark) text-(length:--main-text-size) max-w-[250px] mt-[35px] inline-block">
+                      {el.subtitle}
+                    </span>
+                  </div>
+                  <div className="flex gap-[35px] mt-[90px]">
+                    <button
+                      className="bg-[#323232] p-[12px] rounded-full cursor-pointer disabled:bg-[#212121] hover:bg-[#3A3A3A] duration-300"
+                      onClick={() => handleElementChange("left")}
+                      disabled={currentElement === 0}
+                    >
+                      <Image
+                        src="images/left_arrow.svg"
+                        width={40}
+                        height={40}
+                        alt=""
+                      />
+                    </button>
+                    <button
+                      className="bg-[#323232] p-[12px] rounded-full cursor-pointer disabled:bg-[#212121] hover:bg-[#3A3A3A] duration-300"
+                      onClick={() => handleElementChange("right")}
+                      disabled={currentElement === data.length - 1}
+                    >
+                      <Image
+                        src="images/right_arrow.svg"
+                        width={40}
+                        height={40}
+                        alt=""
+                      />
+                    </button>
+                  </div>
                 </div>
               </div>
               <div className="flex items-end gap-[35px]">
@@ -77,7 +90,7 @@ const Carousel: FC<CarouselProps> = ({ data, showNext = false }) => {
                       className="max-[1700px]:hidden"
                     />
                   ) : (
-                    <div className="w-[188px] h-[266px]" />
+                    <div className="w-[188px] h-[266px] max-[1700px]:hidden" />
                   ))}
               </div>
             </div>
