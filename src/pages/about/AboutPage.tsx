@@ -9,22 +9,22 @@ const AboutPage = () => (
   <Page id="2">
     <OpacityChanger targetScroll={400}>
       <div className="relative">
-        <div className="text-(--color-numbers) text-[2000px] font-bold absolute bottom-0 right-0 leading-[0.55] ">
+        <div className="text-(--color-numbers) text-[2000px] font-bold absolute bottom-0 right-0 leading-[0.55] -z-10">
           2
         </div>
-        <section className="inline-block mt-[230px] ml-[200px]">
-          <div className="flex gap-[35px]">
+        <section className="inline-block mt-[230px] mr-[45px] ml-[200px] max-[920px]:ml-[45px]">
+          <div className="flex gap-[35px] max-[610px]:gap-[15px]">
             <div className="w-[7px] bg-(--color-blue)" />
             <div>
               <span className="text-[25px] font-(family-name:--font-sf-ui-display) font-bold">
                 Кто мы?
               </span>
-              <h2 className="text-[95px] font-bold leading-none mt-[10px] font-(family-name:--font-sf-ui-display)">
+              <h2 className="leading-none mt-[10px] font-(family-name:--font-sf-ui-display)">
                 О компании
               </h2>
             </div>
           </div>
-          <p className="mt-[70px] ml-[45px] max-w-[715px] text-(length:--main-text-size) text-(--color-text-dark)">
+          <p className="mt-[70px] ml-[45px] max-[600px]:ml-0 max-w-[715px] text-(--color-text-dark)">
             ООО «Краснодар компрессор сервис» (ККС) занимается разработкой и
             поставкой компрессорного оборудования для нефтяной, химической,
             металлургической, атомной и других отраслей промышленности. В
@@ -46,11 +46,11 @@ const AboutPage = () => (
             и соответствует отраслевым стандартам.
           </p>
         </section>
-        <div className="w-(--stat-width) mb-[172px] ml-[275px] mt-[90px] mr-[140px] inline-flex justify-between flex-wrap">
+        <div className="mb-[172px] ml-[245px] mt-[90px] mr-[140px] max-[740px]:mr-[45px] flex justify-between flex-wrap gap-[90px] max-[920px]:ml-[90px] max-[600px]:ml-[45px]">
           <IconButton label="Связаться с нами">
             <Image src="images/call.svg" width={40} height={40} alt="" />
           </IconButton>
-          <div className="flex gap-[35px]">
+          <div className="flex gap-[35px] max-[740px]:flex-col">
             <Statistics stat="5+" label="Вариантов исполнения оборудования" />
             <Statistics stat="10+" label="Отраслей промышленности" />
             <Statistics stat="100%" label="Продукции сертифицировано" />

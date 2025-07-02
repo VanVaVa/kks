@@ -11,7 +11,7 @@ const PageNumber: FC<PageNumberProps> = ({ pagesCount }) => {
   const { visibleElementId } = useVisibility();
 
   return (
-    <div className="fixed bottom-[90px] left-[45px]">
+    <div className="fixed bottom-[90px] left-[45px] max-[920px]:hidden">
       <span className="text-[50px] font-medium font-(family-name:--font-sf-ui-display)">
         0{Number(visibleElementId)}{" "}
       </span>

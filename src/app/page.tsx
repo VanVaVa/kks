@@ -10,14 +10,11 @@ export default function Home() {
   return (
     <>
       <ScrollTracker>
-        <div className="fixed w-full h-full -z-10">
-          <div
-            className="min-h-screen bg-[url('/images/first_slide_background.jpg')] bg-fixed absolute -z-10 w-full overflow-hidden"
-            style={{ backgroundPosition: "-455px -419px" }}
-          >
+        <div className="fixed w-full min-h-screen h-full -z-10">
+          <div className="min-h-screen bg-[url('/images/first_slide_background.jpg')] bg-fixed absolute -z-10 w-full overflow-hidden bg-position-(--bg-position-big) max-[980px]:bg-position-(--bg-position-small)">
             <div className="min-h-screen w-full h-full bg-(--color-background)">
               <div
-                className="min-h-screen bg-[url('/images/kamaz.png')] bg-no-repeat bg-fixed"
+                className="max-[980px]:hidden min-h-screen bg-[url('/images/kamaz.png')] bg-no-repeat bg-fixed"
                 style={{
                   backgroundPosition: "645px 138px",
                   backgroundSize: "1544px 1020px",
