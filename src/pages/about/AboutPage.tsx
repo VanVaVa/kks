@@ -9,7 +9,7 @@ const AboutPage = () => (
   <Page id="2">
     <OpacityChanger targetScroll={400}>
       <div className="relative">
-        <div className="text-(--color-numbers) text-[2000px] font-bold absolute bottom-0 right-0 leading-[0.55] -z-10">
+        <div className="text-(--color-numbers) text-[2000px] font-bold absolute top-[100px] right-0 leading-[0.55] -z-10 max-[980px]:hidden">
           2
         </div>
         <section className="inline-block mt-[230px] mr-[45px] ml-[200px] max-[920px]:ml-[45px]">

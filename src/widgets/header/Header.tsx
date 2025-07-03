@@ -10,10 +10,9 @@ const Header = ({ children }: { children?: ReactNode }) => (
     {children}
     <Link
       href="tel:89883888185"
-      className="text-(--color-text-dark) text-[25px] font-(family-name:--font-sf-ui-display) font-medium max-[840px]:hidden"
+      className="text-(--color-text-light) text-[35px] font-(family-name:--font-sf-ui-display) font-medium max-[840px]:hidden"
     >
-      8 (988)
-      <span className="text-(--color-text-light) text-[35px]"> 388-81-85</span>
+      8 (988) 388-81-85
     </Link>
   </header>
 );
