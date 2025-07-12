@@ -34,17 +34,35 @@ const ProductionPage = () => (
         </section>
         <nav className="flex gap-[35px] max-[500px]:gap-[10px] justify-center flex-wrap mt-[150px]">
           <CardLink
+            href="/nitrogen-stations"
             iconUrl="images/bubble_chart.svg"
             text="Азотные компрессорные станции"
           />
           <CardLink
+            href="/air-stations"
             iconUrl="images/filter_drama.svg"
             text="Воздушные компрессорные станции"
           />
-          <CardLink iconUrl="images/tools.svg" text="Поршневые компрессоры" />
-          <CardLink iconUrl="images/wrench.svg" text="Бустеры" />
-          <CardLink iconUrl="images/camera.svg" text="Винтовые DENAIR" />
-          <CardLink iconUrl="images/screwdriver.svg" text="Запасные части" />
+          <CardLink
+            href="/piston-compressors"
+            iconUrl="images/tools.svg"
+            text="Поршневые компрессоры"
+          />
+          <CardLink
+            href="/boosters"
+            iconUrl="images/wrench.svg"
+            text="Бустеры"
+          />
+          <CardLink
+            href="/denair"
+            iconUrl="images/camera.svg"
+            text="Винтовые DENAIR"
+          />
+          <CardLink
+            href="/additional-parts"
+            iconUrl="images/screwdriver.svg"
+            text="Запасные части"
+          />
         </nav>
       </div>
     </OpacityChanger>
