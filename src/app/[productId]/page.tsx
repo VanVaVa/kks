@@ -1,7 +1,8 @@
 import ProductPage from "@/pages/product/ProductPage";
+import { Suspense } from "react";
 
 export async function generateStaticParams() {
-  const productIds = [
+  return [
     { productId: "nitrogen-stations" },
     { productId: "air-stations" },
     { productId: "piston-compressors" },
@@ -10,11 +11,16 @@ export async function generateStaticParams() {
     { productId: "additional-parts" },
   ];
 
-  return productIds;
+  //   return productIds.map(({ productId }) => ({ params: { productId } }));
 }
 
-const Page = async ({ params }: { params: Promise<{ productId: string }> }) => (
-  <ProductPage params={params} />
-);
+const Page = async ({ params }: { params: Promise<{ productId: string }> }) => {
+  const { productId } = await params;
+  return (
+    <Suspense fallback={<div>Загрузка...</div>}>
+      <ProductPage productId={productId} />
+    </Suspense>
+  );
+};
 
 export default Page;
