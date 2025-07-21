@@ -9,6 +9,12 @@ export async function generateStaticParams() {
     { productId: "boosters" },
     { productId: "denair" },
     { productId: "additional-parts" },
+    { productId: "diagnostics" },
+    { productId: "service" },
+    { productId: "repair" },
+    { productId: "modification" },
+    { productId: "warranty-repair" },
+    { productId: "reingineering" },
   ];
 }
 

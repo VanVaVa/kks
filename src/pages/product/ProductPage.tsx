@@ -31,35 +31,28 @@ const ProductPage: FC<ProductPageProps> = ({ productId }) => {
                 <div className="flex gap-[35px] max-[610px]:gap-[15px]">
                   <div className="min-w-[10px] bg-(--color-blue)" />
                   <div>
-                    <h1 className="leading-none mt-[10px] font-(family-name:--font-sf-ui-display)">
+                    <h1
+                      className="leading-none mt-[10px] font-(family-name:--font-sf-ui-display)"
+                      style={{ fontSize: 85 }}
+                    >
                       {product.title}
                     </h1>
                   </div>
                 </div>
-                <p className="mt-[70px] ml-[45px] text-(--color-text-dark) max-[670px]:ml-0">
-                  {product.text.map((el, index) => (
-                    <React.Fragment key={index}>
-                      {el}
-                      <br />
-                      <br />
-                    </React.Fragment>
-                  ))}
-                </p>
+                {product.text}
               </section>
 
-              {product.subtitle && (
+              {
                 <div className="gap-[15px]">
-                  <span className="font-(family-name:--font-sf-ui-display) font-medium text-[35px] leading-[0.9]">
-                    {product.subtitle}
-                  </span>
-                  <div className="w-[25px] h-[7px] bg-(--color-blue) mt-[35px] min-w-[7px]" />
-                  <ul className="text-(--color-text-dark) mt-[35px] inline-block list-disc mb-[90px]">
-                    {product.subtext?.map((el, index) => (
-                      <li key={index} className="mb-[26px] ml-[18px]">
-                        {el}
-                      </li>
-                    ))}
-                  </ul>
+                  {product.subtitle && (
+                    <>
+                      <span className="font-(family-name:--font-sf-ui-display) font-medium text-[30px] leading-[0.9]">
+                        {product.subtitle}
+                      </span>
+                      <div className="w-[25px] h-[7px] bg-(--color-blue) mt-[35px] min-w-[7px]" />
+                    </>
+                  )}
+                  {product.subtext}
                   {product.download && (
                     <IconButton label="Скачать опросный лист">
                       <Image
@@ -71,7 +64,7 @@ const ProductPage: FC<ProductPageProps> = ({ productId }) => {
                     </IconButton>
                   )}
                 </div>
-              )}
+              }
 
               {product.image && (
                 <div className="flex items-center justify-center w-full">

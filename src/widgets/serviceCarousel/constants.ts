@@ -21,6 +21,6 @@ export const services = [
   },
   {
     name: "Обратный инжиниринг (реинжирининг)",
-    link: "/reingenireeng",
+    link: "/reingineering",
   },
 ];

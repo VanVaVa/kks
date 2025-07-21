@@ -32,7 +32,7 @@ const ServiceList = () => {
         />
       </div>
       <div className="w-[25px] min-h-[7px] bg-(--color-blue) min-w-[7px]" />
-      <ul className="text-(--color-text-dark) flex flex-col gap-[35px]">
+      <ul className="text-(--color-text-dark) flex flex-col">
         {services.map((el, idx) => (
           <li
             key={idx}
