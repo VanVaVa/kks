@@ -1,7 +1,8 @@
 "use client";
 
+import useCarousel from "@/shared/hooks/useCarousel";
 import Image from "next/image";
-import { FC, ReactNode, useState } from "react";
+import { FC, ReactNode } from "react";
 
 interface CarouselProps {
   data: {
@@ -15,14 +16,7 @@ interface CarouselProps {
 }
 
 const Carousel: FC<CarouselProps> = ({ data, children, showNext = false }) => {
-  const [currentElement, setCurrentElement] = useState(0);
-
-  const handleElementChange = (direction: "left" | "right") => {
-    if (direction === "left" && currentElement >= 1)
-      setCurrentElement(currentElement - 1);
-    else if (direction === "right" && currentElement < data.length - 1)
-      setCurrentElement(currentElement + 1);
-  };
+  const { handleElementChange, currentElement } = useCarousel(data.length);
 
   return (
     <div className="w-full">

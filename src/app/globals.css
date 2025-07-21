@@ -11,6 +11,7 @@
   --carousel-width: calc(100% - 200px);
   --bg-position-big: -455px -419px;
   --bg-position-small: -800px -470px;
+  --title-width: calc(100% - 180px);
 }
 
 body {

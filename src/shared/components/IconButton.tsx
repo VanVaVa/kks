@@ -8,6 +8,7 @@ interface IconButtonProps {
   children?: ReactNode;
   label?: string;
   reversed?: boolean;
+  href?: string;
 }
 
 const IconButton: React.FC<IconButtonProps> = ({
@@ -15,6 +16,7 @@ const IconButton: React.FC<IconButtonProps> = ({
   children,
   label,
   reversed = false,
+  href,
 }) => {
   const router = useRouter();
 
@@ -24,7 +26,11 @@ const IconButton: React.FC<IconButtonProps> = ({
         {label}
       </span>
       <button
-        onClick={() => (onClick ? onClick() : router.back())}
+        onClick={() => {
+          if (href) router.push(href);
+          else if (onClick) onClick();
+          else router.back();
+        }}
         className={`w-[100px] h-[100px] max-[600px]:w-[70px] max-[600px]:h-[70px] rounded-full border relative flex justify-center items-center hover:bg-[#444] active:bg-[#666] transition-[0.3s] ${
           reversed ? "-order-1" : "order-2"
         }`}

@@ -10,8 +10,6 @@ export async function generateStaticParams() {
     { productId: "denair" },
     { productId: "additional-parts" },
   ];
-
-  //   return productIds.map(({ productId }) => ({ params: { productId } }));
 }
 
 const Page = async ({ params }: { params: Promise<{ productId: string }> }) => {
