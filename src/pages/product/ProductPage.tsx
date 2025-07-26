@@ -26,15 +26,12 @@ const ProductPage: FC<ProductPageProps> = ({ productId }) => {
             <IconButton label="Вернуться назад" reversed>
               <Image src="/images/back.svg" width={40} height={40} alt="" />
             </IconButton>
-            <div className="flex justify-between gap-[150px] max-[1600px]:flex-wrap mt-[70px]">
+            <div className="flex justify-between gap-[75px] max-[1600px]:flex-wrap mt-[70px]">
               <section className="max-w-[760px]">
                 <div className="flex gap-[35px] max-[610px]:gap-[15px]">
                   <div className="min-w-[10px] bg-(--color-blue)" />
                   <div>
-                    <h1
-                      className="leading-none mt-[10px] font-(family-name:--font-sf-ui-display)"
-                      style={{ fontSize: 85 }}
-                    >
+                    <h1 className="leading-none mt-[10px] font-(family-name:--font-sf-ui-display)">
                       {product.title}
                     </h1>
                   </div>

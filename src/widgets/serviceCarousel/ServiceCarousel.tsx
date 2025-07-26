@@ -17,8 +17,8 @@ const ServiceCarousel = () => {
         height={696}
       />
       <div className="w-full">
-        <div className="flex w-full justify-between mt-[70px] items-start">
-          <span className="font-(family-name:--font-sf-ui-display) text-[50px] font-bold max-w-(--title-width) transition-all duration-300">
+        <div className="flex w-full justify-between mt-[70px] items-start max-[690]:items-center">
+          <span className="font-(family-name:--font-sf-ui-display) text-[50px] max-[690]:text-[30px] max-[530px]:text-[20px] font-bold max-w-(--title-width) transition-all duration-300">
             {services[currentElement].name}
           </span>
           <div className="flex gap-[35px]">

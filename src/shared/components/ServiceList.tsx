@@ -6,12 +6,12 @@ import { services } from "@/widgets/serviceCarousel/constants";
 import Link from "next/link";
 
 const ServiceList = () => {
-  const [isOpened, setIsOpened] = useState(false);
+  const [isOpened, setIsOpened] = useState(true);
 
   return (
     <div
       style={{ transition: "max-height .3s ease-in-out" }}
-      className={`max-w-[458px] overflow-hidden flex flex-col gap-[50px] transition duration-300 ${
+      className={`max-w-[458px] mb-[50px] overflow-hidden flex flex-col gap-[50px] transition duration-300 ${
         isOpened ? "max-h-[540px]" : "max-h-[40px]"
       }`}
     >

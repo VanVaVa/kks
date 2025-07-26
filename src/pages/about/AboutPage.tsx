@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const AboutPage = () => (
   <Page id="2">
-    <OpacityChanger targetScroll={400}>
+    <OpacityChanger targetId="2">
       <div className="relative">
         <div className="text-(--color-numbers) text-[2000px] font-bold absolute top-[100px] right-0 leading-[0.55] -z-10 max-[980px]:hidden">
           2
@@ -51,9 +51,9 @@ const AboutPage = () => (
             <Image src="images/call.svg" width={40} height={40} alt="" />
           </IconButton>
           <div className="flex gap-[35px] max-[740px]:flex-col">
-            <Statistics stat="5+" label="Вариантов исполнения оборудования" />
-            <Statistics stat="10+" label="Отраслей промышленности" />
-            <Statistics stat="100%" label="Продукции сертифицировано" />
+            <Statistics stat="5+" label="вариантов исполнения оборудования" />
+            <Statistics stat="10+" label="отраслей промышленности" />
+            <Statistics stat="100%" label="продукции сертифицировано" />
           </div>
         </div>
       </div>

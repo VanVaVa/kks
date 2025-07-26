@@ -13,9 +13,20 @@ interface CarouselProps {
   }[];
   showNext?: boolean;
   children?: ReactNode;
+  extra?: ReactNode;
+  imageSize?: {
+    width: number;
+    height: number;
+  };
 }
 
-const Carousel: FC<CarouselProps> = ({ data, children, showNext = false }) => {
+const Carousel: FC<CarouselProps> = ({
+  data,
+  children,
+  extra,
+  imageSize,
+  showNext = false,
+}) => {
   const { handleElementChange, currentElement } = useCarousel(data.length);
 
   return (
@@ -32,7 +43,8 @@ const Carousel: FC<CarouselProps> = ({ data, children, showNext = false }) => {
                 <div className="flex flex-col justify-between max-[1320px]:justify-end h-full">
                   <div className="max-[1320px]:hidden">{children}</div>
                   <div>
-                    <div>
+                    {extra}
+                    <div className="max-w-[620px]">
                       <span className="font-(family-name:--font-sf-ui-display) font-bold text-[25px] leading-[0.9]">
                         {el.title}
                       </span>
@@ -48,7 +60,7 @@ const Carousel: FC<CarouselProps> = ({ data, children, showNext = false }) => {
                         disabled={currentElement === 0}
                       >
                         <Image
-                          src="images/left_arrow.svg"
+                          src="/images/left_arrow.svg"
                           width={40}
                           height={40}
                           alt=""
@@ -60,7 +72,7 @@ const Carousel: FC<CarouselProps> = ({ data, children, showNext = false }) => {
                         disabled={currentElement === data.length - 1}
                       >
                         <Image
-                          src="images/right_arrow.svg"
+                          src="/images/right_arrow.svg"
                           width={40}
                           height={40}
                           alt=""
@@ -73,8 +85,8 @@ const Carousel: FC<CarouselProps> = ({ data, children, showNext = false }) => {
                   <Image
                     src={el.imageUrl || ""}
                     alt={el.alt || ""}
-                    width={537}
-                    height={760}
+                    width={imageSize?.width || 537}
+                    height={imageSize?.height || 760}
                   />
                   {showNext &&
                     (idx < data.length - 1 ? (

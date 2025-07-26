@@ -5,20 +5,31 @@ import { useVisibility } from "./ScrollTracker";
 
 interface OpacityChangerProps {
   children: ReactNode;
-  targetScroll: number;
+  targetId?: string;
+  zIndex?: number;
+  targetScrollOffset?: number;
 }
 
 const OpacityChanger: FC<OpacityChangerProps> = ({
   children,
-  targetScroll,
+  targetId,
+  zIndex,
+  targetScrollOffset,
 }) => {
-  const { scrollOffset } = useVisibility();
+  const { visibleElementId, scrollOffset } = useVisibility();
 
   return (
     <div
-      className="duration-700"
+      className="duration-700 relative"
       style={{
-        opacity: Math.max(0, Number(scrollOffset) / targetScroll > 0.9 ? 1 : 0),
+        opacity: targetScrollOffset
+          ? targetScrollOffset < Number(scrollOffset)
+            ? 1
+            : 0
+          : Number(targetId) === Number(visibleElementId)
+          ? 1
+          : 0,
+        zIndex: zIndex || (6 - Number(targetId)) * -1 - 10 || "auto",
       }}
     >
       {children}

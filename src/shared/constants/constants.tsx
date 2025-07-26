@@ -301,7 +301,7 @@ export const productData = {
         </ul>
       </>
     ),
-    backgroundUrl: "bg-[url(/images/nitrogen_stations_bg.png)]",
+    backgroundUrl: "bg-[url(/images/fourth_slide_background.png)]",
     subtitle: null,
     subtext: null,
     image: "/images/diagnostics.png",
@@ -333,7 +333,7 @@ export const productData = {
         регулировки производительности.
       </p>
     ),
-    backgroundUrl: "bg-[url(/images/nitrogen_stations_bg.png)]",
+    backgroundUrl: "bg-[url(/images/fourth_slide_background.png)]",
     subtitle:
       "Основные преимущества своевременного проведения технического обслуживания винтовых, поршневых и других типов компрессоров:",
     subtext: (
@@ -408,7 +408,7 @@ export const productData = {
         оборудования.
       </p>
     ),
-    backgroundUrl: "bg-[url(/images/nitrogen_stations_bg.png)]",
+    backgroundUrl: "bg-[url(/images/fourth_slide_background.png)]",
     subtitle: "Мы выполняем следующие виды ремонта  компрессоров:",
     subtext: (
       <>
@@ -451,7 +451,7 @@ export const productData = {
         требуемые параметры сжатого воздуха.
       </p>
     ),
-    backgroundUrl: "bg-[url(/images/nitrogen_stations_bg.png)]",
+    backgroundUrl: "bg-[url(/images/fourth_slide_background.png)]",
     subtitle: null,
     subtext: (
       <p className=" text-(--color-text-dark) max-[670px]:ml-0">
@@ -504,7 +504,7 @@ export const productData = {
         частей) осуществляется ООО «ККС»  бесплатно.
       </p>
     ),
-    backgroundUrl: "bg-[url(/images/nitrogen_stations_bg.png)]",
+    backgroundUrl: "bg-[url(/images/fourth_slide_background.png)]",
     subtitle:
       "Гарантийное обслуживание производится при соблюдении следующих условий:",
     subtext: (
@@ -564,7 +564,7 @@ export const productData = {
         описаний заказчика.
       </p>
     ),
-    backgroundUrl: "bg-[url(/images/nitrogen_stations_bg.png)]",
+    backgroundUrl: "bg-[url(/images/fourth_slide_background.png)]",
     subtitle: null,
     subtext: (
       <div className="flex flex-col gap-[35px] h-full justify-center">
