@@ -2,7 +2,7 @@ import IconButton from "@/shared/components/IconButton";
 import Header from "@/widgets/header/Header";
 import Image from "next/image";
 import React, { FC } from "react";
-import { productData } from "../../shared/constants/constants";
+import { productData } from "../../shared/constants/products";
 
 interface ProductPageProps {
   productId: string;
