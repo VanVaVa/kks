@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import React, { ReactNode } from "react";
+import { useVisibility } from "./ScrollTracker";
 
 interface IconButtonProps {
   onClick?: VoidFunction;
@@ -10,6 +11,7 @@ interface IconButtonProps {
   reversed?: boolean;
   href?: string;
   type?: "button" | "submit";
+  scrollToId?: string;
 }
 
 const IconButton: React.FC<IconButtonProps> = ({
@@ -19,8 +21,10 @@ const IconButton: React.FC<IconButtonProps> = ({
   href,
   reversed = false,
   type = "button",
+  scrollToId,
 }) => {
   const router = useRouter();
+  const { scrollToElement } = useVisibility();
 
   return (
     <div className={`flex gap-[23px] items-center`}>
@@ -31,6 +35,7 @@ const IconButton: React.FC<IconButtonProps> = ({
         type={type}
         onClick={() => {
           if (href) router.push(href);
+          else if (scrollToId) scrollToElement(scrollToId);
           else if (onClick) onClick();
           else if (reversed) router.back();
         }}

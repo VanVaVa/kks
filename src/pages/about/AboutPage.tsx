@@ -47,7 +47,7 @@ const AboutPage = () => (
           </p>
         </section>
         <div className="mb-[172px] ml-[245px] mt-[90px] mr-[140px] max-[740px]:mr-[45px] flex justify-between flex-wrap gap-[90px] max-[920px]:ml-[90px] max-[600px]:ml-[45px]">
-          <IconButton label="Связаться с нами">
+          <IconButton label="Связаться с нами" scrollToId="6">
             <Image src="images/call.svg" width={40} height={40} alt="" />
           </IconButton>
           <div className="flex gap-[35px] max-[740px]:flex-col">
