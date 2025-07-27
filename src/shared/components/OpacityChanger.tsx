@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, ReactNode } from "react";
+import { FC, ReactNode, useEffect, useState } from "react";
 import { useVisibility } from "./ScrollTracker";
 
 interface OpacityChangerProps {
@@ -8,6 +8,7 @@ interface OpacityChangerProps {
   targetId?: string;
   zIndex?: number;
   targetScrollOffset?: number;
+  content?: boolean;
 }
 
 const OpacityChanger: FC<OpacityChangerProps> = ({
@@ -15,20 +16,45 @@ const OpacityChanger: FC<OpacityChangerProps> = ({
   targetId,
   zIndex,
   targetScrollOffset,
+  content = false,
 }) => {
   const { visibleElementId, scrollOffset } = useVisibility();
+  const [windowSize, setWindowSize] = useState<{
+    width: number | null;
+    height: number | null;
+  }>({
+    width: null,
+    height: null,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div
       className="duration-700 relative"
       style={{
-        opacity: targetScrollOffset
-          ? targetScrollOffset < Number(scrollOffset)
+        opacity:
+          content && Number(windowSize.width) < 940
             ? 1
-            : 0
-          : Number(targetId) === Number(visibleElementId)
-          ? 1
-          : 0,
+            : targetScrollOffset
+            ? targetScrollOffset < Number(scrollOffset)
+              ? 1
+              : 0
+            : Number(targetId) === Number(visibleElementId)
+            ? 1
+            : 0,
         zIndex: zIndex || (6 - Number(targetId)) * -1 - 10 || "auto",
       }}
     >

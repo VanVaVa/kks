@@ -9,14 +9,16 @@ interface IconButtonProps {
   label?: string;
   reversed?: boolean;
   href?: string;
+  type?: "button" | "submit";
 }
 
 const IconButton: React.FC<IconButtonProps> = ({
   onClick,
   children,
   label,
-  reversed = false,
   href,
+  reversed = false,
+  type = "button",
 }) => {
   const router = useRouter();
 
@@ -26,10 +28,11 @@ const IconButton: React.FC<IconButtonProps> = ({
         {label}
       </span>
       <button
+        type={type}
         onClick={() => {
           if (href) router.push(href);
           else if (onClick) onClick();
-          else router.back();
+          else if (reversed) router.back();
         }}
         className={`w-[100px] h-[100px] max-[600px]:w-[70px] max-[600px]:h-[70px] rounded-full border relative flex justify-center items-center hover:bg-[#444] active:bg-[#666] transition-[0.3s] ${
           reversed ? "-order-1" : "order-2"

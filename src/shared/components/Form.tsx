@@ -1,0 +1,66 @@
+"use client";
+
+import emailjs from "emailjs-com";
+import IconButton from "./IconButton";
+import Image from "next/image";
+
+const Form = () => {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  //@ts-ignore
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    console.log(e.target);
+
+    emailjs
+      .sendForm(
+        "service_6cdk7zt",
+        "template_8do5cbe",
+        e.target,
+        "Qtv-F59-JTcc0Pd1n"
+      )
+      .then(
+        (result) => {
+          console.log("Email sent successfully:", result.text);
+        },
+        (error) => {
+          console.log("Error sending email:", error.text);
+        }
+      );
+  };
+
+  return (
+    <div>
+      <div className="flex gap-[35px] max-[610px]:gap-[15px] mb-[35px] mt-[150px]">
+        <div className="w-[7px] bg-(--color-blue)" />
+        <span className="text-[25px] font-(family-name:--font-sf-ui-display) font-bold">
+          Оставьте заявку!
+        </span>
+      </div>
+      <form
+        onSubmit={sendEmail}
+        className="flex gap-[35px] items-end flex-wrap"
+      >
+        <div className="flex flex-col gap-[35px]">
+          <input
+            type="text"
+            name="name"
+            placeholder="Введите своё ФИО"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Введите свой E-mail"
+            required
+          />
+        </div>
+        <IconButton label="Отправить" type="submit">
+          <Image src="/images/send.svg" alt="" width={40} height={40} />
+        </IconButton>
+      </form>
+    </div>
+  );
+};
+
+export default Form;

@@ -4,7 +4,7 @@ import Page from "@/shared/components/Page";
 
 const ProductionPage = () => (
   <Page id="3">
-    <OpacityChanger targetId="3">
+    <OpacityChanger targetId="3" content>
       <div className="relative">
         <div className="text-(--color-numbers) text-[2000px] font-bold absolute top-[100px] right-0 leading-[0.55] -z-10 max-[980px]:hidden">
           3

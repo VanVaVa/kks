@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const AboutPage = () => (
   <Page id="2">
-    <OpacityChanger targetId="2">
+    <OpacityChanger targetId="2" content>
       <div className="relative">
         <div className="text-(--color-numbers) text-[2000px] font-bold absolute top-[100px] right-0 leading-[0.55] -z-10 max-[980px]:hidden">
           2

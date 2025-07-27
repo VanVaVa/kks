@@ -1,4 +1,5 @@
 import AboutPage from "@/pages/about/AboutPage";
+import ContactsPage from "@/pages/contacts/ContactsPage";
 import MainPage from "@/pages/main/MainPage";
 import ProductionPage from "@/pages/production/ProductionPage";
 import ProjectPage from "@/pages/project/ProjectPage";
@@ -19,10 +20,7 @@ export default function Home() {
           </OpacityChanger>
 
           <OpacityChanger targetId="2">
-            <div
-              className="min-h-screen bg-[url('/images/second_slide_background.png')] bg-size-[auto_1600px] overflow-hidden absolute w-full -z-10"
-              style={{ backgroundPositionY: -294 }}
-            >
+            <div className="min-h-screen bg-[url('/images/second_slide_background.png')] overflow-hidden absolute w-full -z-10 bg-cover">
               <div className="min-h-screen w-full h-full bg-(--color-background) relative"></div>
             </div>
           </OpacityChanger>
@@ -40,7 +38,11 @@ export default function Home() {
           </OpacityChanger>
 
           <OpacityChanger targetId="5">
-            <div className="min-h-screen w-full h-full bg-[#000] relative"></div>
+            <div className="min-h-screen w-full h-full bg-[#000] absolute"></div>
+          </OpacityChanger>
+
+          <OpacityChanger targetId="6">
+            <div className="min-h-screen w-full h-full bg-[#000] absolute"></div>
           </OpacityChanger>
         </div>
         <Header>
@@ -51,6 +53,7 @@ export default function Home() {
         <ProductionPage />
         <ServicePage />
         <ProjectPage />
+        <ContactsPage />
         <PageNumber pagesCount={6} />
       </ScrollTracker>
     </>

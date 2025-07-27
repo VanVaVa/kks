@@ -5,7 +5,7 @@ import ServiceCarousel from "@/widgets/serviceCarousel/ServiceCarousel";
 
 const ServicePage = () => (
   <Page id="4">
-    <OpacityChanger targetId="4">
+    <OpacityChanger targetId="4" content>
       <div className="text-(--color-numbers) text-[2000px] font-bold absolute top-[100px] right-[-120px] leading-[0.55] -z-10 max-[980px]:hidden">
         4
       </div>
