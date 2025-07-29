@@ -12,6 +12,11 @@ interface IconButtonProps {
   href?: string;
   type?: "button" | "submit";
   scrollToId?: string;
+  download?: boolean;
+  downloadData?: {
+    link: string;
+    name: string;
+  };
 }
 
 const IconButton: React.FC<IconButtonProps> = ({
@@ -22,6 +27,8 @@ const IconButton: React.FC<IconButtonProps> = ({
   reversed = false,
   type = "button",
   scrollToId,
+  download = false,
+  downloadData,
 }) => {
   const router = useRouter();
   const { scrollToElement } = useVisibility();
@@ -35,7 +42,14 @@ const IconButton: React.FC<IconButtonProps> = ({
         type={type}
         onClick={() => {
           if (href) router.push(href);
-          else if (scrollToId) scrollToElement(scrollToId);
+          else if (download && downloadData) {
+            const link = document.createElement("a");
+            link.href = downloadData.link;
+            link.download = downloadData.name;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+          } else if (scrollToId) scrollToElement(scrollToId);
           else if (onClick) onClick();
           else if (reversed) router.back();
         }}

@@ -4,7 +4,7 @@ import Page from "@/shared/components/Page";
 import Image from "next/image";
 
 const ProjectPage = () => (
-  <Page id="5" overflow="hidden">
+  <Page id="5" overflow="hidden" zIndex={12}>
     <OpacityChanger targetId="5">
       <div className="w-full min-h-screen bg-[#010101] absolute top-0 -z-10" />
       <div className="relative w-[1920px] h-[1397px] max-[790px]:h-auto pt-[200px] overflow-hidden">

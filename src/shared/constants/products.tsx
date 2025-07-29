@@ -36,7 +36,10 @@ export const productData = {
       </ul>
     ),
     image: null,
-    download: "qwe",
+    download: {
+      link: "/lists/Опросной лист на азотную станцию (форма ККС).docx",
+      name: "Опросной лист на азотную станцию (форма ККС).docx",
+    },
   },
   "air-stations": {
     title: "Воздушные компрессорные станции",
@@ -72,7 +75,7 @@ export const productData = {
       </ul>
     ),
     image: null,
-    download: "qwe",
+    download: null,
   },
   "piston-compressors": {
     title: "Поршневые компрессоры",
@@ -108,7 +111,10 @@ export const productData = {
     subtitle: null,
     subtext: null,
     image: "/images/piston_compressor.png",
-    download: null,
+    download: {
+      link: "/lists/Опросной лист на дожимной поршневой компрессор (форма ККС).docx",
+      name: "Опросной лист на дожимной поршневой компрессор (форма ККС).docx",
+    },
   },
   boosters: {
     title: "Бустеры",
@@ -159,7 +165,7 @@ export const productData = {
       </ul>
     ),
     image: null,
-    download: "qwe",
+    download: null,
   },
   denair: {
     title: "Винтовые компрессоры DENAIR",

@@ -75,7 +75,7 @@ const ContactsPage = () => (
       </div>
     </Page>
     <Page id="7">
-      <div className="bg-(--color-background) pt-[270px] pb-[270px]">
+      <div className="bg-[#000] pt-[270px] pb-[270px]">
         <div className="flex gap-[35px] max-[610px]:gap-[15px] ml-[200px] max-[920px]:ml-[45px] mb-[140px]">
           <div className="w-[7px] bg-(--color-blue)" />
           <div>

@@ -51,7 +51,11 @@ const ProductPage: FC<ProductPageProps> = ({ productId }) => {
                   )}
                   {product.subtext}
                   {product.download && (
-                    <IconButton label="Скачать опросный лист">
+                    <IconButton
+                      label="Скачать опросный лист"
+                      download
+                      downloadData={product.download}
+                    >
                       <Image
                         src="/images/board.svg"
                         width={40}

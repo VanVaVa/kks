@@ -1,28 +1,8 @@
 import IconButton from "@/shared/components/IconButton";
+import { carouselData } from "@/shared/constants/licenses";
 import Carousel from "@/widgets/carousel/Carousel";
 import Header from "@/widgets/header/Header";
 import Image from "next/image";
-
-const carouselData = [
-  {
-    imageUrl: "/images/licenses/Сертификат_ИСО_9001-2015_2024-1_1.png",
-    alt: "Сертификат ИСО 9001-2015_2024-1 1",
-    title: "Сертификат ИСО Серконс",
-    subtitle: "2024 - 2027",
-  },
-  {
-    imageUrl: "/images/licenses/Сертификат_ИСО_Серконс_2024-2027-1_2.png",
-    alt: "Сертификат_ИСО_Серконс_2024-2027-1_2",
-    title: "Сертификат ИСО Серконс",
-    subtitle: "2024 - 2027",
-  },
-  {
-    imageUrl: "/images/licenses/Сертификат_ИСО_9001-2015_2024-1_1.png",
-    alt: "Сертификат ИСО 9001-2015_2024-1 1",
-    title: "Сертификат ИСО Серконс",
-    subtitle: "2024 - 2027",
-  },
-];
 
 const LicensePage = () => (
   <div>
