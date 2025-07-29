@@ -3,12 +3,9 @@ import OpacityChanger from "@/shared/components/OpacityChanger";
 import Page from "@/shared/components/Page";
 
 const ProductionPage = () => (
-  <Page id="3">
+  <Page id="3" zIndex={11}>
     <OpacityChanger targetId="3" content>
       <div className="relative">
-        <div className="text-(--color-numbers) text-[2000px] font-bold absolute top-[100px] right-0 leading-[0.55] -z-10 max-[980px]:hidden">
-          3
-        </div>
         <section className="inline-block mt-[230px] mr-[45px] ml-[200px] max-[920px]:ml-[45px]">
           <div className="flex gap-[35px] max-[610px]:gap-[15px]">
             <div className="w-[7px] bg-(--color-blue)" />

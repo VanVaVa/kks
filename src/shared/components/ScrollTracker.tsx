@@ -46,7 +46,7 @@ type ScrollTrackerProps = {
 export const ScrollTracker = ({
   children,
   rootMargin = "0px",
-  threshold = 0.5,
+  threshold = [0.3, 0.7],
   scrollBehavior = "smooth",
 }: ScrollTrackerProps) => {
   const containerRef = useRef<HTMLDivElement>(null);

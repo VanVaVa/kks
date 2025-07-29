@@ -14,7 +14,7 @@ const Form = () => {
 
     emailjs
       .sendForm(
-        "service_6cdk7zt",
+        "service_pvdoy9y",
         "template_8do5cbe",
         e.target,
         "Qtv-F59-JTcc0Pd1n"
@@ -30,7 +30,7 @@ const Form = () => {
   };
 
   return (
-    <div>
+    <div className="relative z-20">
       <div className="flex gap-[35px] max-[610px]:gap-[15px] mb-[35px] mt-[150px]">
         <div className="w-[7px] bg-(--color-blue)" />
         <span className="text-[25px] font-(family-name:--font-sf-ui-display) font-bold">

@@ -1,13 +1,16 @@
 "use client";
 
 import IconButton from "@/shared/components/IconButton";
-import useCarousel from "@/shared/hooks/useCarousel";
 import Image from "next/image";
 import { services } from "./constants";
 
-const ServiceCarousel = () => {
-  const { handleElementChange, currentElement } = useCarousel(6, true);
-
+const ServiceCarousel = ({
+  handleElementChange,
+  currentElement,
+}: {
+  handleElementChange: (direction: "left" | "right") => void;
+  currentElement: number;
+}) => {
   return (
     <div className="w-[915px] flex flex-col items-center">
       <Image

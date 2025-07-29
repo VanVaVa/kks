@@ -5,7 +5,7 @@ import PlusIcon from "../icons/PlusIcon";
 import { services } from "@/widgets/serviceCarousel/constants";
 import Link from "next/link";
 
-const ServiceList = () => {
+const ServiceList = ({ currentService }: { currentService: number }) => {
   const [isOpened, setIsOpened] = useState(true);
 
   return (
@@ -37,6 +37,7 @@ const ServiceList = () => {
           <li
             key={idx}
             className="hover:text-[#fff] transition duration-300 cursor-pointer"
+            style={{ color: idx === currentService ? "#fff" : "currentcolor" }}
           >
             <Link href={el.link}>{el.name}</Link>
           </li>
