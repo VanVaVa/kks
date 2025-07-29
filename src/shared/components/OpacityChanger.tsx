@@ -46,7 +46,7 @@ const OpacityChanger: FC<OpacityChangerProps> = ({
       className="duration-700 relative"
       style={{
         opacity:
-          content && Number(windowSize.width) < 940
+          content && Number(windowSize.width) < 1400
             ? 1
             : targetScrollOffset
             ? targetScrollOffset < Number(scrollOffset)
