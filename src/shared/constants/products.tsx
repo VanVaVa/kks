@@ -217,19 +217,28 @@ export const productData = {
         </li>
       </ul>
     ),
-    image: null,
+    image: "/images/products/denair.png",
     download: null,
   },
   "additional-parts": {
     title: "Запасные части",
     text: (
-      <p className="mt-[70px] ml-[45px] text-(--color-text-dark) max-[670px]:ml-0">
-        ООО «Краснодар компрессор сервис» предлагает весь ассортимент запчастей
-        и комплектующих для поршневых компрессоров на базах 2П, 3П, 5П, 7П,
-        2М2,5, 4М2,5, 2М4, а также для компрессорных станций типа ПСКА, ПСК СДА
-        (СД), ПДА (ПД), НДА (НД). Запчасти для ТО и ремонтов всегда в наличии на
-        складе в г. Краснодаре.
-      </p>
+      <>
+        <p className="mt-[70px] ml-[45px] text-(--color-text-dark) max-[670px]:ml-0">
+          ООО «Краснодар компрессор сервис» предлагает весь ассортимент
+          запчастей и комплектующих для поршневых компрессоров на базах 2П, 3П,
+          5П, 7П, 2М2,5, 4М2,5, 2М4, а также для компрессорных станций типа
+          ПСКА, ПСК СДА (СД), ПДА (ПД), НДА (НД). Запчасти для ТО и ремонтов
+          всегда в наличии на складе в г. Краснодаре.
+        </p>
+        <Image
+          className="mt-[90px]"
+          src="/images/products/parts.png"
+          alt="запасные части"
+          width={760}
+          height={507}
+        />
+      </>
     ),
     backgroundUrl: "bg-[url(/images/additional_parts_bg.png)]",
     subtitle: "ООО «ККС» это:",
@@ -310,7 +319,7 @@ export const productData = {
     backgroundUrl: "bg-[url(/images/fourth_slide_background.png)]",
     subtitle: null,
     subtext: null,
-    image: "/images/diagnostics.png",
+    image: null,
     download: null,
   },
   service: {
@@ -424,12 +433,6 @@ export const productData = {
           <li>плановый ремонт компрессорного оборудования;</li>
           <li>капитальный ремонт передвижных компрессорных станций.</li>
         </ol>
-        <Image
-          width={451}
-          height={451}
-          src="/images/services/repair.png"
-          alt=""
-        />
       </>
     ),
     image: null,
@@ -572,22 +575,7 @@ export const productData = {
     ),
     backgroundUrl: "bg-[url(/images/fourth_slide_background.png)]",
     subtitle: null,
-    subtext: (
-      <div className="flex flex-col gap-[35px] h-full justify-center">
-        <Image
-          width={473}
-          height={335}
-          src="/images/services/reingineering_1.png"
-          alt=""
-        />
-        <Image
-          width={473}
-          height={335}
-          src="/images/services/reingineering_2.png"
-          alt=""
-        />
-      </div>
-    ),
+    subtext: null,
     image: null,
     download: null,
   },

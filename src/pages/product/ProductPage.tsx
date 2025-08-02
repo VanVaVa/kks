@@ -27,7 +27,19 @@ const ProductPage: FC<ProductPageProps> = ({ productId }) => {
               <Image src="/images/back.svg" width={40} height={40} alt="" />
             </IconButton>
             <div className="flex justify-between gap-[75px] max-[1600px]:flex-wrap mt-[70px]">
-              <section className="max-w-[760px]">
+              <section
+                className="max-w-[760px]"
+                style={{
+                  maxWidth:
+                    product.subtitle || product.image || product.subtext
+                      ? 760
+                      : "unset",
+                  minWidth:
+                    product.subtitle || product.image || product.subtext
+                      ? 700
+                      : "unset",
+                }}
+              >
                 <div className="flex gap-[35px] max-[610px]:gap-[15px]">
                   <div className="min-w-[10px] bg-(--color-blue)" />
                   <div>
@@ -53,6 +65,16 @@ const ProductPage: FC<ProductPageProps> = ({ productId }) => {
                     </>
                   )}
                   {product.subtext}
+                  {product.image && (
+                    <div className="flex items-center justify-center w-full mb-[90px]">
+                      <Image
+                        width={605}
+                        height={645}
+                        src={product.image}
+                        alt={product.title}
+                      />
+                    </div>
+                  )}
                   {product.download && (
                     <IconButton
                       label="Скачать опросный лист"
@@ -69,17 +91,6 @@ const ProductPage: FC<ProductPageProps> = ({ productId }) => {
                   )}
                 </div>
               }
-
-              {product.image && (
-                <div className="flex items-center justify-center w-full">
-                  <Image
-                    width={605}
-                    height={645}
-                    src={product.image}
-                    alt={product.title}
-                  />
-                </div>
-              )}
             </div>
           </div>
         </div>

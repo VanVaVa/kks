@@ -91,6 +91,12 @@ const ProjectPage = () => (
             top={1245}
             text="Грозный"
           />
+          <MapPoint
+            href="/projects/surgut"
+            left={972}
+            top={701}
+            text="Cургут"
+          />
         </div>
       </div>
     </OpacityChanger>

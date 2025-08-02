@@ -219,4 +219,26 @@ export const projects = {
       },
     ],
   },
+  surgut: {
+    extra: "г. Москва",
+    data: [
+      {
+        imageUrl: "/images/projects/moscow/kamaz.png",
+        alt: "",
+        title: "-",
+        subtitle: "-",
+      },
+    ],
+  },
+  novorossijsk: {
+    extra: "г. Москва",
+    data: [
+      {
+        imageUrl: "/images/projects/moscow/kamaz.png",
+        alt: "",
+        title: "-",
+        subtitle: "-",
+      },
+    ],
+  },
 };

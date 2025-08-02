@@ -15,6 +15,8 @@ export async function generateStaticParams() {
     { projectId: "krasnodar" },
     { projectId: "koshehabl" },
     { projectId: "grozniy" },
+    { projectId: "surgut" },
+    { projectId: "novorossijsk" },
   ];
 }
 
