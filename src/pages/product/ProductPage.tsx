@@ -31,7 +31,10 @@ const ProductPage: FC<ProductPageProps> = ({ productId }) => {
                 <div className="flex gap-[35px] max-[610px]:gap-[15px]">
                   <div className="min-w-[10px] bg-(--color-blue)" />
                   <div>
-                    <h1 className="leading-none mt-[10px] font-(family-name:--font-sf-ui-display)">
+                    <h1
+                      className="leading-none mt-[10px] font-(family-name:--font-sf-ui-display)"
+                      style={{ fontSize: 70 }}
+                    >
                       {product.title}
                     </h1>
                   </div>
