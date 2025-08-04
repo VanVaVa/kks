@@ -6,7 +6,7 @@ import { useVisibility } from "./ScrollTracker";
 interface OpacityChangerProps {
   children: ReactNode;
   targetId?: string;
-  zIndex?: number;
+  zIndex?: number | string;
   targetScrollOffset?: number;
   content?: boolean;
 }
@@ -52,7 +52,7 @@ const OpacityChanger: FC<OpacityChangerProps> = ({
             ? targetScrollOffset < Number(scrollOffset)
               ? 1
               : 0
-            : Number(targetId) === Number(visibleElementId)
+            : Number(targetId) <= Number(visibleElementId)
             ? 1
             : 0,
         zIndex: zIndex || (6 - Number(targetId)) * -1 - 10 || "auto",

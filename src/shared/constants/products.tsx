@@ -397,7 +397,7 @@ export const productData = {
     download: null,
   },
   repair: {
-    title: "Обслуживание компрессорного оборудования",
+    title: "Ремонт компрессорного оборудования",
     text: (
       <p className="mt-[70px] ml-[45px] text-(--color-text-dark) max-[670px]:ml-0">
         Отказ компрессорного оборудования часто случается в самый неподходящий
@@ -439,7 +439,8 @@ export const productData = {
     download: null,
   },
   modification: {
-    title: "Модернизация компрессоров и компрессорных станций",
+    title:
+      "Модернизация поршневых компрессоров и передвижных компрессорных станций",
     text: (
       <p className="mt-[70px] ml-[45px] text-(--color-text-dark) max-[670px]:ml-0">
         ООО «Краснодар компрессор сервис» предлагает услуги по модернизации как

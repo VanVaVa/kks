@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const MainPage = () => (
   <Page id="1">
-    <section className="mb-[100px] mt-[325px] ml-[200px] inline-block max-[920px]:ml-[40px] max-[610px]:mt-[180px]">
+    <section className="mb-[100px] pt-[325px] max-[610px]:pt-[180px]">
       <h1 className="leading-none max-w-[700px] font-(family-name:--font-sf-ui-display)">
         Краснодар Компрессор Сервис
       </h1>

@@ -2,11 +2,14 @@ import IconButton from "@/shared/components/IconButton";
 import { carouselData } from "@/shared/constants/licenses";
 import Carousel from "@/widgets/carousel/Carousel";
 import Header from "@/widgets/header/Header";
+import HeaderNavigation from "@/widgets/header/HeaderNavigation";
 import Image from "next/image";
 
 const LicensePage = () => (
   <div>
-    <Header />
+    <Header>
+      <HeaderNavigation elements={["Запчасти", "Станции", "Предприятие"]} />
+    </Header>
     <div className="min-h-screen bg-[url('/images/license_background.png')] bg-fixed bg-cover -z-10 w-full">
       <div className="min-h-screen w-screen h-full bg-(--color-background) pt-[151px]">
         <div className="ml-[200px] max-[920px]:ml-[40px] mr-[200px] max-[920px]:mr-[40px] flex flex-col">

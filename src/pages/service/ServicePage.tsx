@@ -3,7 +3,7 @@ import ServiceModule from "@/widgets/services/ServicesModule";
 
 const ServicePage = () => (
   <Page id="4">
-    <div className="pt-[253px] pl-[200px] pr-[45px] min-h-screen max-[920px]:pl-[45px]">
+    <div className="pt-[253px]">
       <div className="flex gap-[35px] max-[610px]:gap-[15px] mb-[100px]">
         <div className="min-w-[7px] bg-(--color-blue)" />
         <div>

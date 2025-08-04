@@ -9,7 +9,7 @@ const AboutPage = () => (
   <Page id="2">
     <OpacityChanger targetId="2" content>
       <div className="relative">
-        <section className="inline-block mt-[230px] mr-[45px] ml-[200px] max-[920px]:ml-[45px]">
+        <section className="pt-[230px]">
           <div className="flex gap-[35px] max-[610px]:gap-[15px]">
             <div className="w-[7px] bg-(--color-blue)" />
             <div>
@@ -43,7 +43,7 @@ const AboutPage = () => (
             и соответствует отраслевым стандартам.
           </p>
         </section>
-        <div className="mb-[172px] ml-[245px] mt-[90px] mr-[140px] max-[740px]:mr-[45px] flex justify-between flex-wrap gap-[90px] max-[920px]:ml-[90px] max-[600px]:ml-[45px]">
+        <div className="mb-[172px] ml-[45px] mt-[90px] mr-[100px] max-[740px]:mr-[45px] flex justify-between flex-wrap gap-[90px]">
           <IconButton label="Связаться с нами" scrollToId="6">
             <Image src="images/call.svg" width={40} height={40} alt="" />
           </IconButton>

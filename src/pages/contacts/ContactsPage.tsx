@@ -7,7 +7,7 @@ import Link from "next/link";
 const ContactsPage = () => (
   <>
     <Page id="6">
-      <div className="relative min-h-screen pt-[230px] pl-[200px] max-[920px]:pl-[45px] pb-[257px] bg-(--color-background)">
+      <div className="relative pt-[230px] pb-[257px] bg-(--color-background)">
         <Image
           src="/images/sixth_slide_background.png"
           alt=""
@@ -76,7 +76,7 @@ const ContactsPage = () => (
     </Page>
     <Page id="7">
       <div className="bg-[#000] pt-[270px] pb-[270px]">
-        <div className="flex gap-[35px] max-[610px]:gap-[15px] ml-[200px] max-[920px]:ml-[45px] mb-[140px]">
+        <div className="flex gap-[35px] max-[610px]:gap-[15px] mb-[140px]">
           <div className="w-[7px] bg-(--color-blue)" />
           <div>
             <span className="text-[25px] font-(family-name:--font-sf-ui-display) font-bold">
@@ -87,7 +87,7 @@ const ContactsPage = () => (
             </h2>
           </div>
         </div>
-        <div className="flex justify-center gap-[130px] flex-wrap items-end px-[45px]">
+        <div className="flex justify-center gap-[130px] flex-wrap items-end px-[45px] ml-[-200px] mr-[-45px] max-[920px]:ml-[-45px]">
           <div className="flex flex-col items-center">
             <Image
               src="/images/partners/ugtehmash.png"
