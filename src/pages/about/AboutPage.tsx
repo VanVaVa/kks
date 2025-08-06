@@ -43,7 +43,7 @@ const AboutPage = () => (
             и соответствует отраслевым стандартам.
           </p>
         </section>
-        <div className="mb-[172px] ml-[45px] mt-[90px] mr-[100px] max-[740px]:mr-[45px] flex justify-between flex-wrap gap-[90px]">
+        <div className="mb-[172px] ml-[45px] mt-[90px] mr-[100px] max-[740px]:mr-[45px] flex justify-between flex-wrap gap-[90px] max-[485px]:ml-0">
           <IconButton label="Связаться с нами" scrollToId="6">
             <Image src="images/call.svg" width={40} height={40} alt="" />
           </IconButton>

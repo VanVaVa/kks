@@ -2,9 +2,12 @@
 
 import HeaderNavigationElement from "@/shared/components/HeaderNavigationElement";
 import { useVisibility } from "@/shared/components/ScrollTracker";
+import { useEffect } from "react";
 
 const HeaderNavigation = ({ elements }: { elements: string[] }) => {
   const { visibleElementId, scrollToElement } = useVisibility();
+
+  useEffect(() => console.log(visibleElementId), [visibleElementId]);
 
   return (
     <div className="mt-[19px] relative flex items-center max-[1220px]:hidden">

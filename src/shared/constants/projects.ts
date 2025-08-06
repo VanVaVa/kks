@@ -231,7 +231,7 @@ export const projects = {
     ],
   },
   novorossijsk: {
-    extra: "г. Москва",
+    extra: "г. Новороссийск",
     data: [
       {
         imageUrl: "/images/projects/moscow/kamaz.png",

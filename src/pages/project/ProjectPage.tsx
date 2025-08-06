@@ -103,6 +103,11 @@ const ProjectPage = () => (
               top={701}
               text="Cургут"
             />
+            <MapPoint
+              href="/projects/novorossijsk"
+              mobileOnly
+              text="Новороссийск"
+            />
           </div>
         </div>
       </OpacityChanger>

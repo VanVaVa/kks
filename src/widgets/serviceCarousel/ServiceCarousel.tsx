@@ -14,7 +14,7 @@ const ServiceCarousel = ({
   return (
     <div className="w-[915px] flex flex-col items-center">
       <Image
-        src="/images/services/diagnostics.png"
+        src={services[currentElement].image}
         alt=""
         width={713}
         height={696}
@@ -30,7 +30,7 @@ const ServiceCarousel = ({
               onClick={() => handleElementChange("left")}
             >
               <Image
-                src="images/left_arrow.svg"
+                src="/images/left_arrow.svg"
                 width={40}
                 height={40}
                 alt=""
@@ -41,7 +41,7 @@ const ServiceCarousel = ({
               onClick={() => handleElementChange("right")}
             >
               <Image
-                src="images/right_arrow.svg"
+                src="/images/right_arrow.svg"
                 width={40}
                 height={40}
                 alt=""

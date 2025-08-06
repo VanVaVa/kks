@@ -37,7 +37,6 @@ li {
 
 h1,
 h2,
-h3,
 h4,
 h5,
 h6 {
@@ -45,14 +44,22 @@ h6 {
   font-weight: bold;
 }
 
+h3 {
+  font-size: 80px;
+  font-weight: bold;
+}
+
 @media (max-width: 890px) {
   h1,
   h2,
-  h3,
   h4,
   h5,
   h6 {
     font-size: 70px;
+  }
+
+  h3 {
+    font-size: 55px;
   }
 
   input {
@@ -68,11 +75,14 @@ h6 {
 
   h1,
   h2,
-  h3,
   h4,
   h5,
   h6 {
     font-size: 40px;
+  }
+
+  h3 {
+    font-size: 30px;
   }
 
   input {

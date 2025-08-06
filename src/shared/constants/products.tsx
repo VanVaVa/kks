@@ -35,7 +35,7 @@ export const productData = {
         <li>для замещения воздуха азотом в хранилищах.</li>
       </ul>
     ),
-    image: null,
+    image: "/images/products/nitrogen_stations.png",
     download: {
       link: "/lists/Опросной лист на азотную станцию (форма ККС).docx",
       name: "Опросной лист на азотную станцию (форма ККС).docx",
@@ -74,7 +74,7 @@ export const productData = {
         <li>для пневмо оборудования (больших предприятий);</li>
       </ul>
     ),
-    image: null,
+    image: "/images/products/air_station.png",
     download: null,
   },
   "piston-compressors": {
@@ -164,7 +164,7 @@ export const productData = {
         <li>Нечувствительность к запыленности помещения</li>
       </ul>
     ),
-    image: null,
+    image: "/images/products/booster.png",
     download: null,
   },
   denair: {

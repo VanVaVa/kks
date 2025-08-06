@@ -1,16 +1,4 @@
-export const carouselData = [
-  {
-    imageUrl: "/images/licenses/Сертификат_ИСО_9001-2015_2024-1_1.png",
-    alt: "Сертификат ИСО 9001-2015_2024-1 1",
-    title: "Сертификат ИСО Серконс",
-    subtitle: "2024 - 2027",
-  },
-  {
-    imageUrl: "/images/licenses/Сертификат_ИСО_Серконс_2024-2027-1_2.png",
-    alt: "Сертификат_ИСО_Серконс_2024-2027-1_2",
-    title: "Сертификат ИСО Серконс",
-    subtitle: "2024 - 2027",
-  },
+export const parts = [
   {
     imageUrl:
       "/images/licenses/Декларация_о_соответствии_на_Газоохладители.png",
@@ -31,12 +19,9 @@ export const carouselData = [
     title: "Сертификат ГОСТ Р",
     subtitle: "2023 - 2026",
   },
-  {
-    imageUrl: "/images/licenses/Сертификат ГОСТ Р на зч_2023_2026.png",
-    alt: "Сертификат ГОСТ Р на зч_2023_2026",
-    title: "Сертификат ГОСТ Р",
-    subtitle: "2023 - 2026",
-  },
+];
+
+export const stations = [
   {
     imageUrl: "/images/licenses/Сертификат ПСКА_9000.png",
     alt: "Сертификат ПСКА_9000",
@@ -71,10 +56,28 @@ export const carouselData = [
     title: "Декларация МЭКС, МДКС",
     subtitle: "2025",
   },
+];
+
+export const pistons = [
   {
     imageUrl: "/images/licenses/Декларация на Установки поршневые_2025.png",
     alt: "Декларация на Установки поршневые_2025",
     title: "Декларация на Установки поршневые",
     subtitle: "2025",
+  },
+];
+
+export const production = [
+  {
+    imageUrl: "/images/licenses/Сертификат_ИСО_9001-2015_2024-1_1.png",
+    alt: "Сертификат ИСО 9001-2015_2024-1 1",
+    title: "Сертификат ИСО Серконс",
+    subtitle: "2024 - 2027",
+  },
+  {
+    imageUrl: "/images/licenses/Сертификат_ИСО_Серконс_2024-2027-1_2.png",
+    alt: "Сертификат_ИСО_Серконс_2024-2027-1_2",
+    title: "Сертификат ИСО Серконс",
+    subtitle: "2024 - 2027",
   },
 ];

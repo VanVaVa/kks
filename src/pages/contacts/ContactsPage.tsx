@@ -7,13 +7,13 @@ import Link from "next/link";
 const ContactsPage = () => (
   <>
     <Page id="6">
-      <div className="relative pt-[230px] pb-[257px] bg-(--color-background)">
+      <div className="relative pt-[230px] pb-[257px] mr-[-45px] bg-(--color-background) h-full">
         <Image
           src="/images/sixth_slide_background.png"
           alt=""
           width={1920}
           height={1589}
-          className="absolute -z-30 right-0 top-0 w-[1920px] h-auto"
+          className="absolute -z-30 right-0 top-0 w-[1920px] h-auto max-[720px]:hidden"
         />
         <div className="absolute top-[594px] right-[275px] w-[150px] h-[150px] rounded-full border-1 flex justify-center items-center border-[#323232] max-[1820px]:hidden">
           <div className="w-[100px] h-[100px] rounded-full border-1 flex justify-center items-center border-[#727272]">
