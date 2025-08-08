@@ -2,7 +2,7 @@ import Page from "@/shared/components/Page";
 import ServiceModule from "@/widgets/services/ServicesModule";
 
 const ServicePage = () => (
-  <Page id="4">
+  <Page id="5">
     <div className="pt-[253px]">
       <div className="flex gap-[35px] max-[610px]:gap-[15px] mb-[100px]">
         <div className="min-w-[7px] bg-(--color-blue)" />

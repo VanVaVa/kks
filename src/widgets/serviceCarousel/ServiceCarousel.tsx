@@ -12,16 +12,16 @@ const ServiceCarousel = ({
   currentElement: number;
 }) => {
   return (
-    <div className="w-[915px] flex flex-col items-center">
+    <div className="w-[715px] flex flex-col items-center max-[1620px]:w-[600px]">
       <Image
         src={services[currentElement].image}
         alt=""
-        width={713}
-        height={696}
+        width={550}
+        height={550}
       />
       <div className="w-full">
         <div className="flex w-full justify-between mt-[70px] items-start max-[690]:items-center">
-          <span className="font-(family-name:--font-sf-ui-display) text-[50px] max-[690]:text-[30px] max-[530px]:text-[20px] font-bold max-w-(--title-width) transition-all duration-300">
+          <span className="font-(family-name:--font-sf-ui-display) text-[40px] max-[690]:text-[25px] max-[530px]:text-[18px] font-bold max-w-(--title-width) transition-all duration-300">
             {services[currentElement].name}
           </span>
           <div className="flex gap-[35px]">

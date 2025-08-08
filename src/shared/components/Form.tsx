@@ -54,6 +54,11 @@ const Form = () => {
             placeholder="Введите свой E-mail"
             required
           />
+          <textarea
+            name="text"
+            placeholder="Введите текст заявки"
+            className="resize-none border-3 p-[10px] border-(--color-text-dark) text-(--color-text-dark) text-[25px] h-[150px]"
+          />
         </div>
         <IconButton label="Отправить" type="submit">
           <Image src="/images/send.svg" alt="" width={40} height={40} />

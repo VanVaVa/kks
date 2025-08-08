@@ -8,7 +8,7 @@ const ServiceModule = () => {
   const { handleElementChange, currentElement } = useCarousel(6, true);
 
   return (
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap w-full justify-between pr-[200px] max-[1000px]:pr-0 max-[1620px]:pr-[100px]">
       <ServiceList currentService={currentElement} />
       <ServiceCarousel
         currentElement={currentElement}

@@ -3,6 +3,7 @@ import ContactsPage from "@/pages/contacts/ContactsPage";
 import MainPage from "@/pages/main/MainPage";
 import ProductionPage from "@/pages/production/ProductionPage";
 import ProjectPage from "@/pages/project/ProjectPage";
+import SertificatePage from "@/pages/sertificate/SertificatePage";
 import ServicePage from "@/pages/service/ServicePage";
 import OpacityChanger from "@/shared/components/OpacityChanger";
 import PageNumber from "@/shared/components/PageNumber";
@@ -30,19 +31,15 @@ export default function Home() {
         </OpacityChanger>
 
         <OpacityChanger targetId="3">
-          <div className="min-h-screen bg-[url('/images/third_slide_background.png')] bg-cover bg-center overflow-hidden absolute w-full -z-10">
-            <div className="min-h-screen w-full h-full bg-(--color-background) relative">
-              <div className="text-(--color-numbers) text-[2000px] font-bold absolute top-[100px] right-0 leading-[0.55] max-[980px]:hidden">
-                3
-              </div>
-            </div>
+          <div className="min-h-screen bg-[url('/images/second_slide_background.png')] overflow-hidden absolute w-full -z-10 bg-cover">
+            <div className="min-h-screen w-full h-full bg-(--color-background) relative" />
           </div>
         </OpacityChanger>
 
         <OpacityChanger targetId="4">
-          <div className="min-h-screen bg-[url('/images/fourth_slide_background.png')] bg-cover bg-center overflow-hidden absolute w-full -z-10">
+          <div className="min-h-screen bg-[url('/images/third_slide_background.png')] bg-cover bg-center overflow-hidden absolute w-full -z-10">
             <div className="min-h-screen w-full h-full bg-(--color-background) relative">
-              <div className="text-(--color-numbers) text-[2000px] font-bold absolute top-[100px] right-[-120px] leading-[0.55] max-[980px]:hidden">
+              <div className="text-(--color-numbers) text-[2000px] font-bold absolute top-[100px] right-0 leading-[0.55] max-[980px]:hidden">
                 4
               </div>
             </div>
@@ -50,7 +47,13 @@ export default function Home() {
         </OpacityChanger>
 
         <OpacityChanger targetId="5">
-          <div className="min-h-screen w-full h-full bg-[#000] absolute"></div>
+          <div className="min-h-screen bg-[url('/images/fourth_slide_background.png')] bg-cover bg-center overflow-hidden absolute w-full -z-10">
+            <div className="min-h-screen w-full h-full bg-(--color-background) relative">
+              <div className="text-(--color-numbers) text-[2000px] font-bold absolute top-[100px] right-[-120px] leading-[0.55] max-[980px]:hidden">
+                5
+              </div>
+            </div>
+          </div>
         </OpacityChanger>
 
         <OpacityChanger targetId="6">
@@ -60,17 +63,22 @@ export default function Home() {
         <OpacityChanger targetId="7">
           <div className="min-h-screen w-full h-full bg-[#000] absolute"></div>
         </OpacityChanger>
+
+        <OpacityChanger targetId="8">
+          <div className="min-h-screen w-full h-full bg-[#000] absolute"></div>
+        </OpacityChanger>
       </div>
       <Header>
         <HeaderNavigation elements={tabs} />
       </Header>
       <MainPage />
       <AboutPage />
+      <SertificatePage />
       <ProductionPage />
       <ServicePage />
       <ProjectPage />
       <ContactsPage />
-      <PageNumber pagesCount={7} />
+      <PageNumber pagesCount={8} />
     </ScrollTracker>
   );
 }
