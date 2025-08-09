@@ -3,11 +3,66 @@ export const projects = {
     extra: "г. Москва",
     data: [
       {
-        imageUrl: "/images/projects/moscow/kamaz.png",
+        imageUrl:
+          "/images/projects/moscow/peredvizhnaya azotnaya kompressornaya stantsiya (PSK-A 10:251 S95 na shassi KAMAZ 63501 30-25-52), 2022.png",
         alt: "",
         title:
           "Проведение дефектовочных работ компрессорной станции ПСКА-5/221",
         subtitle: "март 2022 г.",
+      },
+      {
+        imageUrl:
+          "/images/projects/moscow/peredvizhnaya azotnaya kompressornaya stantsiya (PSK-A 10:251 S95 na shassi KAMAZ 63501 30-25-52), 2022.png",
+        alt: "",
+        title:
+          "Проведение дефектовочных работ компрессорной станции ТГА-20/101Д",
+        subtitle: "март 2022 г.",
+      },
+      {
+        imageUrl:
+          "/images/projects/moscow/peredvizhnaya azotnaya kompressornaya stantsiya (PSK-A 10:251 S95 na shassi KAMAZ 63501 30-25-52), 2022.png",
+        alt: "",
+        title: "Ремонт компрессорной установки ТГА-20/101Д",
+        subtitle: "май 2023 г.",
+      },
+      {
+        imageUrl:
+          "/images/projects/moscow/peredvizhnaya azotnaya kompressornaya stantsiya (PSK-A 10:251 S95 na shassi KAMAZ 63501 30-25-52), 2022.png",
+        alt: "",
+        title:
+          "Дефектовочные работы на объекте: азотная компрессорная установка типа НДА-10/251М",
+        subtitle: "март 2024 г.",
+      },
+      {
+        imageUrl:
+          "/images/projects/moscow/peredvizhnaya azotnaya kompressornaya stantsiya (PSK-A 10:251 S95 na shassi KAMAZ 63501 30-25-52), 2022.png",
+        alt: "",
+        title:
+          "Работы по демонтажу/монтажу и наладке дизеля на азотной станции",
+        subtitle: "апрель 2024 г.",
+      },
+      {
+        imageUrl:
+          "/images/projects/moscow/peredvizhnaya azotnaya kompressornaya stantsiya (PSK-A 10:251 S95 na shassi KAMAZ 63501 30-25-52), 2022.png",
+        alt: "",
+        title: "Ремонт азотной  компрессорной станции",
+        subtitle: "апрель 2024 г.",
+      },
+      {
+        imageUrl:
+          "/images/projects/moscow/peredvizhnaya azotnaya kompressornaya stantsiya (PSK-A 10:251 S95 na shassi KAMAZ 63501 30-25-52), 2022.png",
+        alt: "",
+        title:
+          "Выезд на объект Заказчика для проведения дефектовочных работ механической части компрессорной станции НДА 10/251 М",
+        subtitle: "ноябрь 2024 г.",
+      },
+      {
+        imageUrl:
+          "/images/projects/moscow/peredvizhnaya azotnaya kompressornaya stantsiya (PSK-A 10:251 S95 na shassi KAMAZ 63501 30-25-52), 2022.png",
+        alt: "",
+        title:
+          "Выполнение работ по замене штока 2-й ступени, уплотнительных колец 1-2 ст. (с последующей сборкой компрессора)",
+        subtitle: "ноябрь 2024 г.",
       },
     ],
   },
@@ -15,7 +70,8 @@ export const projects = {
     extra: "г. Усинск",
     data: [
       {
-        imageUrl: "/images/projects/moscow/kamaz.png",
+        imageUrl:
+          "/images/projects/usinsk/nosimaya kompressornaya stantsiya 2020.png",
         alt: "",
         title: "носимая компрессорная станция",
         subtitle: "2020 г.",
@@ -38,53 +94,56 @@ export const projects = {
     extra: "г. Саратов",
     data: [
       {
-        imageUrl: "/images/projects/moscow/kamaz.png",
+        imageUrl: "/images/projects/saratov/kamaz.png",
         alt: "",
         title: "Дефектовочные работы по станции НДА-10/251М",
         subtitle: "январь 2023",
       },
       {
-        imageUrl: "/images/projects/moscow/kamaz.png",
+        imageUrl: "/images/projects/saratov/kamaz.png",
         alt: "",
         title: "Капитальный ремонт  станции НДА-10/251М",
         subtitle: "февраль 2023",
       },
       {
-        imageUrl: "/images/projects/moscow/kamaz.png",
+        imageUrl: "/images/projects/saratov/kamaz.png",
         alt: "",
         title:
           "Проведение работ по техническому обслуживанию согласно регламента ТО 250 с заменой расходных материалов на компрессорной станции НСКА -10/250 С95",
         subtitle: "июнь 2024",
       },
       {
-        imageUrl: "/images/projects/moscow/kamaz.png",
+        imageUrl: "/images/projects/saratov/kamaz.png",
         alt: "",
         title:
           "Диагностика мобильной азотной станции АСт-СНГ-400-95-1,0-УХЛ-1-01",
         subtitle: "июль 2024",
       },
       {
-        imageUrl: "/images/projects/moscow/kamaz.png",
+        imageUrl: "/images/projects/saratov/kamaz.png",
         alt: "",
         title:
           "Проведение работ по техническому обслуживанию согласно регламента ТО 250 с заменой расходных материалов на компрессорной станции НСКА -10/250 С95",
         subtitle: "июль 2024",
       },
       {
-        imageUrl: "/images/projects/moscow/kamaz.png",
+        imageUrl:
+          "/images/projects/saratov/nosimaya azotno-kompressornaya stantsiya (NSK-A 10:251 S95), 2024.png",
         alt: "",
         title:
           "Диагностика и ремонтные работы на компрессорной станции СДА-10/101",
         subtitle: "октябрь 2024",
       },
       {
-        imageUrl: "/images/projects/moscow/kamaz.png",
+        imageUrl:
+          "/images/projects/saratov/nosimaya azotno-kompressornaya stantsiya (NSK-A 10:251 S95), 2024.png",
         alt: "",
         title: "ТО и ремонт компрессорной установки НСК-А 10/251 С95",
         subtitle: "октябрь 2024",
       },
       {
-        imageUrl: "/images/projects/moscow/kamaz.png",
+        imageUrl:
+          "/images/projects/saratov/nosimaya azotno-kompressornaya stantsiya (NSK-A 10:251 S95), 2024.png",
         alt: "",
         title: "ТО и ремонт  компрессорной станции",
         subtitle: "октябрь 2024",
@@ -140,7 +199,8 @@ export const projects = {
     extra: "г. Оренбург",
     data: [
       {
-        imageUrl: "/images/projects/moscow/kamaz.png",
+        imageUrl:
+          "/images/projects/orenburg/nosimaya azotno-kompressornaya stantsiya (NSK-A-10:251 S95) 2021.png",
         alt: "",
         title: "носимая азотно-компрессорная станция НСК-А-10/251 С95",
         subtitle: "2021",
@@ -151,7 +211,8 @@ export const projects = {
     extra: "г. Астана",
     data: [
       {
-        imageUrl: "/images/projects/moscow/kamaz.png",
+        imageUrl:
+          "/images/projects/astana/Azotnaya kompressornaya stantsiya тАУdlya ustanovki na  shassi 63501 s kolosnoy bazoy 8kh8 (PSKA-25:24 A95-98) 2024.png",
         alt: "",
         title:
           "послепродажное обслуживание Азотно-компрессорной станции  ПСКА-25/24 А95-98 на  шасси КамАЗ 63501",
@@ -170,7 +231,8 @@ export const projects = {
     extra: "г. Ростов-на-Дону",
     data: [
       {
-        imageUrl: "/images/projects/moscow/kamaz.png",
+        imageUrl:
+          "/images/projects/rostov-on-don/modul'naya elektrokompressornaya stantsiya(MEKS 8:400-E) 2021.png",
         alt: "",
         title: "модульная электрокомпрессорная станция МЭКС 8/400-Э",
         subtitle: "2021",
@@ -211,7 +273,8 @@ export const projects = {
     extra: "г. Грозный",
     data: [
       {
-        imageUrl: "/images/projects/moscow/kamaz.png",
+        imageUrl:
+          "/images/projects/grozniy/peredvizhnaya kompressornaya stantsiya (PSK-9:101 na shassi KAMAZ 42118) 2022.png",
         alt: "",
         title:
           "передвижная компрессорная станция ПСК-9/101 на шасси КАМАЗ 42118",
@@ -220,7 +283,7 @@ export const projects = {
     ],
   },
   surgut: {
-    extra: "г. Москва",
+    extra: "г. Сургут",
     data: [
       {
         imageUrl: "/images/projects/moscow/kamaz.png",

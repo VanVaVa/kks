@@ -25,11 +25,11 @@ const HeaderNavigationElement: React.FC<ElementProps> = ({
         <div className="w-[21px] h-[21px] rounded-full border absolute top-[-7px] transition-all" />
       )}
       <div
-        className={`transition-all
+        className={`transition-all text-[18px] max-[1500px]:text-[14px]
         ${
           !selected
-            ? "text-(--color-text-dark) text-(length:--main-text-size) mt-[27px]"
-            : "text-white text-[25px] mt-[22px]"
+            ? "text-(--color-text-dark) mt-[27px]"
+            : "text-white text-[22px] mt-[22px]"
         }`}
       >
         {text}

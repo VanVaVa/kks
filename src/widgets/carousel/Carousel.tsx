@@ -30,9 +30,9 @@ const Carousel: FC<CarouselProps> = ({
   const { handleElementChange, currentElement } = useCarousel(data.length);
 
   return (
-    <div className="w-full max-w-full">
+    <div className="w-full max-w-full min-h-[700px]">
       <div className="min-[1320px]:hidden mb-[90px]">{children}</div>
-      <div className="flex grow-1 max-[920px]:justify-center">
+      <div className="flex grow-1 max-[920px]:justify-center h-full">
         {data.map((el, idx) => {
           if (currentElement === idx) {
             return (
