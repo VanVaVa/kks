@@ -7,22 +7,7 @@ import Link from "next/link";
 const ContactsPage = () => (
   <>
     <Page id="7">
-      <div className="relative pt-[230px] pb-[257px] mr-[-45px] bg-(--color-background) h-full">
-        <Image
-          src="/images/sixth_slide_background.png"
-          alt=""
-          width={1920}
-          height={1589}
-          className="absolute -z-30 right-0 top-0 w-[1920px] h-auto max-[720px]:hidden"
-        />
-        <div className="absolute top-[594px] right-[275px] w-[150px] h-[150px] rounded-full border-1 flex justify-center items-center border-[#323232] max-[1820px]:hidden">
-          <div className="w-[100px] h-[100px] rounded-full border-1 flex justify-center items-center border-[#727272]">
-            <MapIcon className="fill-[#fff]" />
-          </div>
-        </div>
-        <div className="text-(--color-numbers) text-[2000px] font-bold absolute top-[100px] right-0 leading-[0.55] max-[980px]:hidden">
-          7
-        </div>
+      <div className="relative pt-[230px] pb-[257px] mr-[-45px] h-full">
         <div className="flex gap-[35px] max-[610px]:gap-[15px]">
           <div className="w-[7px] bg-(--color-blue)" />
           <div>
@@ -75,7 +60,7 @@ const ContactsPage = () => (
       </div>
     </Page>
     <Page id="8">
-      <div className="bg-[#000] pt-[270px] pb-[270px]">
+      <div className="pt-[270px] pb-[270px]">
         <div className="flex gap-[35px] max-[610px]:gap-[15px] mb-[140px]">
           <div className="w-[7px] bg-(--color-blue)" />
           <div>

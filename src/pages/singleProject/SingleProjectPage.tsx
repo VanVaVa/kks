@@ -14,7 +14,7 @@ const SingleProjectPage = ({ projectId }: { projectId: string }) => {
     <div>
       <Header />
       <div className="min-h-screen bg-[url('/images/third_slide_background.png')] bg-fixed bg-cover -z-10 w-full">
-        <div className="min-h-screen w-screen h-full bg-(--color-background) pt-[151px]">
+        <div className="min-h-screen w-screen h-full bg-(--color-background) pt-[151px] pb-[90px]">
           <div className="ml-[200px] max-[920px]:ml-[40px] mr-[200px] max-[920px]:mr-[40px] flex flex-col">
             <IconButton label="Вернуться назад" reversed>
               <Image src="/images/back.svg" width={40} height={40} alt="" />

@@ -6,7 +6,7 @@ import { FC, ReactNode } from "react";
 
 interface CarouselProps {
   data: {
-    imageUrl?: string;
+    imageUrl: string | null;
     alt?: string;
     title?: string;
     subtitle?: string;
@@ -32,7 +32,7 @@ const Carousel: FC<CarouselProps> = ({
   return (
     <div className="w-full max-w-full min-h-[700px]">
       <div className="min-[1320px]:hidden mb-[90px]">{children}</div>
-      <div className="flex grow-1 max-[920px]:justify-center h-full">
+      <div className="flex grow-1 max-[920px]:justify-center min-[1320px]:h-full">
         {data.map((el, idx) => {
           if (currentElement === idx) {
             return (
@@ -82,12 +82,14 @@ const Carousel: FC<CarouselProps> = ({
                   </div>
                 </div>
                 <div className="flex items-end gap-[35px]">
-                  <Image
-                    src={el.imageUrl || ""}
-                    alt={el.alt || ""}
-                    width={imageSize?.width || 537}
-                    height={imageSize?.height || 760}
-                  />
+                  {el.imageUrl && (
+                    <Image
+                      src={el.imageUrl || ""}
+                      alt={el.alt || ""}
+                      width={imageSize?.width || 537}
+                      height={imageSize?.height || 760}
+                    />
+                  )}
                   {showNext &&
                     (idx < data.length - 1 ? (
                       <Image

@@ -3,28 +3,45 @@
 import emailjs from "emailjs-com";
 import IconButton from "./IconButton";
 import Image from "next/image";
+import { useState } from "react";
 
 const Form = () => {
+  // const [fileName, setFileName] = useState("Прикрепить опросный лист...");
+  const [sendStatus, setSendStatus] = useState<null | string>(null);
+
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  //@ts-ignore
+  // const handleFileChange = (event) => {
+  //   const file = event.target.files[0];
+  //   setFileName(file ? file.name : "Выберите файл");
+  // };
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   //@ts-ignore
   const sendEmail = (e) => {
     e.preventDefault();
 
-    console.log(e.target);
+    const formData = new FormData(e.target);
+
+    const emailData = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      text: formData.get("text"),
+      attachment: formData.get("attachment"),
+    };
 
     emailjs
-      .sendForm(
+      .send(
         "service_9czhlix",
         "template_cebgv8d",
-        e.target,
+        emailData,
         "aLrN7VottHjfhP0zS"
       )
       .then(
-        (result) => {
-          console.log("Email sent successfully:", result.text);
+        () => {
+          setSendStatus("Заявка отправлена успешно");
         },
-        (error) => {
-          console.log("Error sending email:", error.text);
+        () => {
+          setSendStatus("Ошибка отправки");
         }
       );
   };
@@ -59,6 +76,32 @@ const Form = () => {
             placeholder="Введите текст заявки"
             className="resize-none border-3 p-[10px] border-(--color-text-dark) text-(--color-text-dark) text-[25px] h-[150px]"
           />
+          {/* <div className="flex items-center gap-[10px]">
+            <input
+              type="file"
+              id="fileInput"
+              className="hidden"
+              name="attachment"
+              onChange={handleFileChange}
+            />
+            <label
+              htmlFor="fileInput"
+              className="cursor-pointer text-white transition flex items-center gap-[10px]"
+            >
+              <Image src="/images/clip.svg" alt="" width={40} height={40} />
+              {fileName}
+            </label>
+          </div> */}
+          <span
+            style={{
+              color:
+                sendStatus === "Заявка отправлена успешно"
+                  ? "#73c886"
+                  : "#ea8282",
+            }}
+          >
+            {sendStatus}
+          </span>
         </div>
         <IconButton label="Отправить" type="submit">
           <Image src="/images/send.svg" alt="" width={40} height={40} />

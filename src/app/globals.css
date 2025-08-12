@@ -15,7 +15,7 @@
 }
 
 body {
-  background: var(--color-background);
+  background: #000;
   color: var(--color-text-light);
   font-family: Poppins, sans-serif;
   font-size: var(--main-text-size);
@@ -45,7 +45,7 @@ h6 {
 }
 
 h3 {
-  font-size: 80px;
+  font-size: 70px;
   font-weight: bold;
 }
 

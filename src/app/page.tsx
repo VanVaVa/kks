@@ -8,16 +8,18 @@ import ServicePage from "@/pages/service/ServicePage";
 import OpacityChanger from "@/shared/components/OpacityChanger";
 import PageNumber from "@/shared/components/PageNumber";
 import { ScrollTracker } from "@/shared/components/ScrollTracker";
+import MapIcon from "@/shared/icons/MapIcon";
 import Header from "@/widgets/header/Header";
 import HeaderNavigation from "@/widgets/header/HeaderNavigation";
 import { tabs } from "@/widgets/header/constants";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <ScrollTracker>
       <div className="fixed w-full min-h-screen">
         <OpacityChanger targetId="1">
-          <div className="min-h-screen bg-[url('/images/first_slide_background.jpg')] bg-fixed bg-cover absolute -z-15 w-full overflow-hidden"></div>
+          <div className="min-h-screen bg-[url('/images/first_slide_background.jpg')] bg-fixed bg-cover absolute -z-15 w-full overflow-hidden" />
         </OpacityChanger>
 
         <OpacityChanger targetId="2">
@@ -61,7 +63,24 @@ export default function Home() {
         </OpacityChanger>
 
         <OpacityChanger targetId="7">
-          <div className="min-h-screen w-full h-full bg-[#000] absolute"></div>
+          <div className="min-h-screen w-full h-full bg-[#000] absolute">
+            <Image
+              src="/images/sixth_slide_background.png"
+              alt=""
+              width={1920}
+              height={1589}
+              className="absoluteright-0 top-0 w-[1920px] h-auto max-[720px]:hidden"
+            />
+            <div className="min-h-screen w-full h-full bg-(--color-background) absolute top-0 left-0"></div>
+            <div className="absolute top-[594px] right-[275px] w-[150px] h-[150px] rounded-full border-1 flex justify-center items-center border-[#323232] max-[1820px]:hidden">
+              <div className="w-[100px] h-[100px] rounded-full border-1 flex justify-center items-center border-[#727272]">
+                <MapIcon className="fill-[#fff]" />
+              </div>
+            </div>
+            <div className="text-(--color-numbers) text-[2000px] font-bold absolute top-[100px] right-0 leading-[0.55] max-[980px]:hidden">
+              7
+            </div>
+          </div>
         </OpacityChanger>
 
         <OpacityChanger targetId="8">

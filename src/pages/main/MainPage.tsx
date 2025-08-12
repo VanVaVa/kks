@@ -21,7 +21,7 @@ const MainPage = () => (
         </p>
       </div>
       <div className="mt-[90px] max-[500px]:mt-[45px]">
-        <IconButton label="Оставить заявку" scrollToId="6">
+        <IconButton label="Оставить заявку" scrollToId="7">
           <Image src="images/board.svg" width={40} height={40} alt="" />
         </IconButton>
       </div>

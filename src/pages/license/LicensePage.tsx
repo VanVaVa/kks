@@ -67,7 +67,7 @@ const LicensePage = () => (
         <Carousel showNext data={production}>
           <div className="flex gap-[35px]  max-[610px]:gap-[15px] max-w-[620px]">
             <div className="min-w-[7px] bg-(--color-blue)" />
-            <h3 className="text-(--font-sf-ui-display) leading-[1em] break-all">
+            <h3 className="text-(--font-sf-ui-display) leading-[1em]">
               Производство
             </h3>
           </div>
@@ -75,7 +75,7 @@ const LicensePage = () => (
       </div>
     </Page>
     <Page id="4">
-      <div className="pt-[200px] mr-[155px] max-[920px]:mr-0">
+      <div className="pt-[200px] mr-[155px] max-[920px]:mr-0 pb-[90px]">
         <Carousel showNext data={pistons}>
           <div className="flex gap-[35px]  max-[610px]:gap-[15px] max-w-[620px]">
             <div className="min-w-[7px] bg-(--color-blue)" />
