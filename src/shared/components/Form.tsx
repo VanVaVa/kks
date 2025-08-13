@@ -1,49 +1,47 @@
 "use client";
 
-import emailjs from "emailjs-com";
+import axios from "axios";
 import IconButton from "./IconButton";
 import Image from "next/image";
-import { useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 
 const Form = () => {
-  // const [fileName, setFileName] = useState("Прикрепить опросный лист...");
-  const [sendStatus, setSendStatus] = useState<null | string>(null);
+  const [file, setFile] = useState<File | null>(null);
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [text, setText] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
 
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  //@ts-ignore
-  // const handleFileChange = (event) => {
-  //   const file = event.target.files[0];
-  //   setFileName(file ? file.name : "Выберите файл");
-  // };
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  //@ts-ignore
-  const sendEmail = (e) => {
+  const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files) {
+      setFile(e.target.files[0]);
+    }
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const formData = new FormData();
+    if (file) {
+      formData.append("file", file);
+    }
+    formData.append("name", name);
+    formData.append("email", email);
+    formData.append("text", text);
 
-    const formData = new FormData(e.target);
-
-    const emailData = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      text: formData.get("text"),
-      attachment: formData.get("attachment"),
-    };
-
-    emailjs
-      .send(
-        "service_9czhlix",
-        "template_cebgv8d",
-        emailData,
-        "aLrN7VottHjfhP0zS"
-      )
-      .then(
-        () => {
-          setSendStatus("Заявка отправлена успешно");
-        },
-        () => {
-          setSendStatus("Ошибка отправки");
+    try {
+      await axios.post(
+        "http://194.87.147.51:8080/api/v1/message/welcome@kks23.ru",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
         }
       );
+      setMessage("Заявка отправлена успешно");
+    } catch {
+      setMessage("Произошла ошибка при отправке сообщения.");
+    }
   };
 
   return (
@@ -55,28 +53,31 @@ const Form = () => {
         </span>
       </div>
       <form
-        onSubmit={sendEmail}
+        onSubmit={handleSubmit}
         className="flex gap-[35px] items-end flex-wrap"
       >
         <div className="flex flex-col gap-[35px]">
           <input
             type="text"
             name="name"
+            onChange={(e) => setName(e.target.value)}
             placeholder="Введите своё ФИО"
             required
           />
           <input
             type="email"
             name="email"
+            onChange={(e) => setEmail(e.target.value)}
             placeholder="Введите свой E-mail"
             required
           />
           <textarea
             name="text"
             placeholder="Введите текст заявки"
+            onChange={(e) => setText(e.target.value)}
             className="resize-none border-3 p-[10px] border-(--color-text-dark) text-(--color-text-dark) text-[25px] h-[150px]"
           />
-          {/* <div className="flex items-center gap-[10px]">
+          <div className="flex items-center gap-[10px]">
             <input
               type="file"
               id="fileInput"
@@ -89,18 +90,16 @@ const Form = () => {
               className="cursor-pointer text-white transition flex items-center gap-[10px]"
             >
               <Image src="/images/clip.svg" alt="" width={40} height={40} />
-              {fileName}
+              {file?.name}
             </label>
-          </div> */}
+          </div>
           <span
             style={{
               color:
-                sendStatus === "Заявка отправлена успешно"
-                  ? "#73c886"
-                  : "#ea8282",
+                message === "Заявка отправлена успешно" ? "#73c886" : "#ea8282",
             }}
           >
-            {sendStatus}
+            {message}
           </span>
         </div>
         <IconButton label="Отправить" type="submit">
