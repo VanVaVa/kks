@@ -30,7 +30,7 @@ const Form = () => {
 
     try {
       await axios.post(
-        "http://194.87.147.51:8080/api/v1/message/welcome@kks23.ru",
+        `${process.env.NEXT_PUBLIC_API_URL}/api/v1/message/welcome@kks23.ru`,
         formData,
         {
           headers: {
@@ -90,7 +90,7 @@ const Form = () => {
               className="cursor-pointer text-white transition flex items-center gap-[10px]"
             >
               <Image src="/images/clip.svg" alt="" width={40} height={40} />
-              {file?.name}
+              {file?.name || "Прикрепить опросный лист..."}
             </label>
           </div>
           <span
